@@ -1,0 +1,491 @@
+{
+  "version": "2026-07-02",
+  "examples": [
+    {
+      "dataset": "Health&Gait",
+      "case_id": "PA000",
+      "model": "mistral-small:24b",
+      "method": "FR",
+      "case_features": [
+        {
+          "name": "reduced_step_length_fgs",
+          "value": 54.3,
+          "evidence": "Step_FGS=54.300, z=-1.21, threshold=57.151"
+        },
+        {
+          "name": "reduced_stride_length_fgs",
+          "value": 110.5,
+          "evidence": "Stride_FGS=110.500, z=-1.26, threshold=117.865"
+        },
+        {
+          "name": "increased_cadence_ugs",
+          "value": 133.91,
+          "evidence": "Cadence_UGS=133.910, z=1.15, threshold=131.559"
+        }
+      ],
+      "retrieved_context_ids": [
+        "fukuchi_speed_effects",
+        "health_gait_dataset_schema",
+        "perry_step_stride_progression",
+        "perry_velocity_cadence_timing"
+      ],
+      "raw_llm_answer": {
+        "summary": "The case evidence indicates specific gait patterns characterized by reduced step length and stride length during fast gait speed (FGS), along with increased cadence during usual gait speed (UGS). These findings suggest alterations in forward progression and stepping frequency, which are crucial for understanding the individual's gait mechanics.",
+        "claims": [
+          {
+            "text": "The patient exhibits a reduced step length of 54.3 cm (z=-1.21) during fast gait speed, indicating shorter steps compared to healthy references. This pattern suggests impaired forward progression and may contribute to a short-step gait interpretation.",
+            "features": [
+              "reduced_step_length_fgs"
+            ],
+            "source_id": "perry_step_stride_progression",
+            "citation": "Perry & Burnfield, Gait Analysis: Normal and Pathological Function (distance/time gait parameters)"
+          },
+          {
+            "text": "The patient exhibits a reduced stride length of 110.5 cm (z=-1.26) during fast gait speed, indicating shorter strides compared to healthy references. This pattern suggests impaired forward progression and may contribute to a short-stride gait interpretation.",
+            "features": [
+              "reduced_stride_length_fgs"
+            ],
+            "source_id": "perry_step_stride_progression",
+            "citation": "Perry & Burnfield, Gait Analysis: Normal and Pathological Function (distance/time gait parameters)"
+          },
+          {
+            "text": "The patient exhibits an increased cadence of 133.91 steps per minute (z=1.15) during usual gait speed, indicating a higher stepping frequency compared to healthy references. This pattern suggests altered timing and may contribute to a faster stepping rhythm.",
+            "features": [
+              "increased_cadence_ugs"
+            ],
+            "source_id": "perry_velocity_cadence_timing",
+            "citation": "Perry & Burnfield, Gait Analysis: Normal and Pathological Function (distance/time gait parameters)"
+          }
+        ]
+      },
+      "supported_claims": [
+        {
+          "text": "The patient exhibits a reduced step length of 54.3 cm (z=-1.21) during fast gait speed, indicating shorter steps compared to healthy references. This pattern suggests impaired forward progression and may contribute to a short-step gait interpretation (case values: reduced_step_length_fgs: Step_FGS=54.300, z=-1.21, threshold=57.151).",
+          "feature": "reduced_step_length_fgs",
+          "evidence_ids": [
+            "case:reduced_step_length_fgs",
+            "context:perry_step_stride_progression"
+          ],
+          "graph_path": null,
+          "source_citations": [
+            "Perry & Burnfield, Gait Analysis: Normal and Pathological Function (distance/time gait parameters)"
+          ]
+        },
+        {
+          "text": "The patient exhibits a reduced stride length of 110.5 cm (z=-1.26) during fast gait speed, indicating shorter strides compared to healthy references. This pattern suggests impaired forward progression and may contribute to a short-stride gait interpretation (case values: reduced_stride_length_fgs: Stride_FGS=110.500, z=-1.26, threshold=117.865).",
+          "feature": "reduced_stride_length_fgs",
+          "evidence_ids": [
+            "case:reduced_stride_length_fgs",
+            "context:perry_step_stride_progression"
+          ],
+          "graph_path": null,
+          "source_citations": [
+            "Perry & Burnfield, Gait Analysis: Normal and Pathological Function (distance/time gait parameters)"
+          ]
+        },
+        {
+          "text": "The patient exhibits an increased cadence of 133.91 steps per minute (z=1.15) during usual gait speed, indicating a higher stepping frequency compared to healthy references. This pattern suggests altered timing and may contribute to a faster stepping rhythm (case values: increased_cadence_ugs: Cadence_UGS=133.910, z=1.15, threshold=131.559).",
+          "feature": "increased_cadence_ugs",
+          "evidence_ids": [
+            "case:increased_cadence_ugs",
+            "context:perry_velocity_cadence_timing"
+          ],
+          "graph_path": null,
+          "source_citations": [
+            "Perry & Burnfield, Gait Analysis: Normal and Pathological Function (distance/time gait parameters)"
+          ]
+        }
+      ],
+      "unsupported_claims": [],
+      "evaluation": {
+        "case_id": "PA000",
+        "pipeline": "embedding_rag",
+        "feature_coverage": 1.0,
+        "faithfulness": 1.0,
+        "hallucination_rate": 0.0,
+        "citation_accuracy": 1.0,
+        "graph_path_validity": null
+      }
+    },
+    {
+      "dataset": "Health&Gait",
+      "case_id": "PA000",
+      "model": "mistral-small:24b",
+      "method": "TGR",
+      "case_features": [
+        {
+          "name": "reduced_step_length_fgs",
+          "value": 54.3,
+          "evidence": "Step_FGS=54.300, z=-1.21, threshold=57.151"
+        },
+        {
+          "name": "reduced_stride_length_fgs",
+          "value": 110.5,
+          "evidence": "Stride_FGS=110.500, z=-1.26, threshold=117.865"
+        },
+        {
+          "name": "increased_cadence_ugs",
+          "value": 133.91,
+          "evidence": "Cadence_UGS=133.910, z=1.15, threshold=131.559"
+        }
+      ],
+      "retrieved_context_ids": [],
+      "raw_llm_answer": {
+        "summary": "The case evidence indicates reduced step length and stride length during fast gait speed (FGS), along with increased cadence during usual gait speed (UGS). These findings suggest a pattern of shortened forward progression and altered stepping frequency.",
+        "claims": [
+          {
+            "text": "Reduced step length (Step_FGS=54.300, z=-1.21) and reduced stride length (Stride_FGS=110.500, z=-1.26) during fast gait speed indicate shortened forward progression rather than isolated measurement findings.",
+            "features": [
+              "reduced_step_length_fgs",
+              "reduced_stride_length_fgs"
+            ],
+            "source_id": "perry_step_stride_progression",
+            "citation": "perry_2010_gait_analysis_normal (local PDF, distance/time gait parameters; previously indexed pages 30, 36, 37)"
+          },
+          {
+            "text": "Increased cadence (Cadence_UGS=133.910, z=1.15) during usual gait speed should be interpreted together with step and stride length rather than as an isolated abnormality.",
+            "features": [
+              "increased_cadence_ugs"
+            ],
+            "source_id": "perry_velocity_cadence_timing",
+            "citation": "perry_2010_gait_analysis_normal (local PDF, distance/time gait parameters; previously indexed pages 30, 442)"
+          }
+        ]
+      },
+      "supported_claims": [
+        {
+          "text": "Reduced step length (Step_FGS=54.300, z=-1.21) and reduced stride length (Stride_FGS=110.500, z=-1.26) during fast gait speed indicate shortened forward progression rather than isolated measurement findings (case values: reduced_step_length_fgs: Step_FGS=54.300, z=-1.21, threshold=57.151; reduced_stride_length_fgs: Stride_FGS=110.500, z=-1.26, threshold=117.865).",
+          "feature": "reduced_step_length_fgs",
+          "evidence_ids": [
+            "case:reduced_step_length_fgs",
+            "case:reduced_stride_length_fgs",
+            "node:perry_step_stride_progression"
+          ],
+          "graph_path": null,
+          "source_citations": [
+            "perry_2010_gait_analysis_normal (local PDF, distance/time gait parameters; previously indexed pages 30, 36, 37)"
+          ]
+        },
+        {
+          "text": "Increased cadence (Cadence_UGS=133.910, z=1.15) during usual gait speed should be interpreted together with step and stride length rather than as an isolated abnormality (case values: increased_cadence_ugs: Cadence_UGS=133.910, z=1.15, threshold=131.559).",
+          "feature": "increased_cadence_ugs",
+          "evidence_ids": [
+            "case:increased_cadence_ugs",
+            "node:perry_velocity_cadence_timing"
+          ],
+          "graph_path": null,
+          "source_citations": [
+            "perry_2010_gait_analysis_normal (local PDF, distance/time gait parameters; previously indexed pages 30, 442)"
+          ]
+        }
+      ],
+      "unsupported_claims": [],
+      "evaluation": {
+        "case_id": "PA000",
+        "pipeline": "vectorless_tree_rag",
+        "feature_coverage": 1.0,
+        "faithfulness": 1.0,
+        "hallucination_rate": 0.0,
+        "citation_accuracy": 1.0,
+        "graph_path_validity": null
+      }
+    },
+    {
+      "dataset": "Above-Knee Amputee Gait",
+      "case_id": "TF06_0p5",
+      "model": "qwen3:14b",
+      "method": "FR",
+      "case_features": [
+        {
+          "name": "prosthetic_ankle_reduced_push_off_moment",
+          "value": 0.5823860467988303,
+          "evidence": "speed=0.5 m/s, ankle_plantarflexion_moment_ratio_ipsi_contra=0.582, threshold=0.750, ankle_plantarflexion_moment_ipsilateral_peak_nmkg=0.568, ankle_plantarflexion_moment_contralateral_peak_nmkg=0.975; prosthetic ankle plantarflexion moment peak is reduced versus intact side"
+        },
+        {
+          "name": "prosthetic_ankle_rom_asymmetry",
+          "value": 0.5068403603654216,
+          "evidence": "speed=0.5 m/s, ankle_position_rom_ratio_ipsi_contra=0.507, threshold=0.800, ankle_position_ipsilateral_rom_deg=10.444, ankle_position_contralateral_rom_deg=20.606; prosthetic ankle sagittal-plane range of motion differs from intact side"
+        },
+        {
+          "name": "prosthetic_knee_reduced_rom",
+          "value": 0.6738326606964666,
+          "evidence": "speed=0.5 m/s, knee_position_rom_ratio_ipsi_contra=0.674, threshold=0.800, knee_position_ipsilateral_rom_deg=36.088, knee_position_contralateral_rom_deg=53.556; prosthetic-side knee sagittal-plane range of motion is reduced versus intact side"
+        },
+        {
+          "name": "prosthetic_hip_compensation_rom",
+          "value": 1.1513560338777025,
+          "evidence": "speed=0.5 m/s, hip_position_rom_ratio_ipsi_contra=1.151, threshold=1.150, hip_position_ipsilateral_rom_deg=43.227, hip_position_contralateral_rom_deg=37.545; prosthetic-side hip sagittal-plane range of motion is higher than intact side"
+        },
+        {
+          "name": "prosthetic_hip_moment_asymmetry",
+          "value": 0.6116804937311668,
+          "evidence": "speed=0.5 m/s, hip_moment_peak_ratio_ipsi_contra=0.612, threshold=0.750, hip_moment_ipsilateral_peak_nmkg=0.245, hip_moment_contralateral_peak_nmkg=0.400; prosthetic-side hip moment peak differs from intact side"
+        }
+      ],
+      "retrieved_context_ids": [
+        "amputee_ankle_propulsion_push_off",
+        "amputee_ankle_sagittal_rom_asymmetry",
+        "amputee_knee_sagittal_pattern",
+        "amputee_hip_compensation_pattern"
+      ],
+      "raw_llm_answer": {
+        "summary": "The gait analysis of an above-knee amputee walking at 0.5 m/s reveals reduced propulsion from the prosthetic ankle, reduced ankle and knee range of motion on the prosthetic side, and increased hip motion on the prosthetic side compared to the intact limb.",
+        "claims": [
+          {
+            "text": "The prosthetic ankle plantarflexion moment peak is reduced compared to the contralateral side, indicating reduced propulsion during late stance at 0.5 m/s. The prosthetic-side ankle plantarflexion moment peak is 0.568 nmkg versus 0.975 nmkg on the intact side, with a ratio of 0.582.",
+            "features": [
+              "prosthetic_ankle_reduced_push_off_moment"
+            ],
+            "source_id": "amputee_ankle_propulsion_push_off",
+            "citation": "Perry & Burnfield gait phase biomechanics; Hood & Lenzi Figshare prosthesis-side ankle moment fields"
+          },
+          {
+            "text": "The prosthetic ankle sagittal-plane range of motion is reduced compared to the contralateral side, indicating an ankle motion asymmetry. The prosthetic-side ankle ROM is 10.444 degrees versus 20.606 degrees on the intact side, with a ratio of 0.507.",
+            "features": [
+              "prosthetic_ankle_rom_asymmetry"
+            ],
+            "source_id": "amputee_ankle_sagittal_rom_asymmetry",
+            "citation": "Perry & Burnfield sagittal-plane joint motion; Hood & Lenzi Figshare ankle position fields"
+          },
+          {
+            "text": "The prosthetic knee sagittal-plane range of motion is reduced compared to the contralateral side, indicating an altered sagittal-plane knee pattern. The prosthetic-side knee ROM is 36.088 degrees versus 53.556 degrees on the intact side, with a ratio of 0.674.",
+            "features": [
+              "prosthetic_knee_reduced_rom"
+            ],
+            "source_id": "amputee_knee_sagittal_pattern",
+            "citation": "Perry & Burnfield knee motion in gait; Hood & Lenzi Figshare knee position fields"
+          },
+          {
+            "text": "The prosthetic-side hip sagittal-plane range of motion is higher than the contralateral side, indicating a hip compensation pattern. The prosthetic-side hip ROM is 43.227 degrees versus 37.545 degrees on the intact side, with a ratio of 1.151.",
+            "features": [
+              "prosthetic_hip_compensation_rom"
+            ],
+            "source_id": "amputee_hip_compensation_pattern",
+            "citation": "Perry & Burnfield hip motion and compensations; Hood & Lenzi Figshare hip position fields"
+          },
+          {
+            "text": "The prosthetic-side hip moment peak is reduced compared to the contralateral side, indicating a joint moment asymmetry. The prosthetic-side hip moment peak is 0.245 nmkg versus 0.400 nmkg on the intact side, with a ratio of 0.612.",
+            "features": [
+              "prosthetic_hip_moment_asymmetry"
+            ],
+            "source_id": "amputee_hip_compensation_pattern",
+            "citation": "Perry & Burnfield hip motion and compensations; Hood & Lenzi Figshare hip position fields"
+          }
+        ]
+      },
+      "supported_claims": [
+        {
+          "text": "The prosthetic ankle plantarflexion moment peak is reduced compared to the contralateral side, indicating reduced propulsion during late stance at 0.5 m/s. The prosthetic-side ankle plantarflexion moment peak is 0.568 nmkg versus 0.975 nmkg on the intact side, with a ratio of 0.582 (case values: prosthetic ankle push-off moment: speed=0.5 m/s, ankle_plantarflexion_moment_ratio_ipsi_contra=0.582, threshold=0.750, ankle_plantarflexion_moment_ipsilateral_peak_nmkg=0.568, ankle_plantarflexion_moment_contralateral_peak_nmkg=0.975; prosthetic ankle plantarflexion moment peak is reduced versus intact side).",
+          "feature": "prosthetic_ankle_reduced_push_off_moment",
+          "evidence_ids": [
+            "case:prosthetic_ankle_reduced_push_off_moment",
+            "context:amputee_ankle_propulsion_push_off"
+          ],
+          "graph_path": null,
+          "source_citations": [
+            "Perry & Burnfield gait phase biomechanics; Hood & Lenzi Figshare prosthesis-side ankle moment fields"
+          ]
+        },
+        {
+          "text": "The prosthetic ankle sagittal-plane range of motion is reduced compared to the contralateral side, indicating an ankle motion asymmetry. The prosthetic-side ankle ROM is 10.444 degrees versus 20.606 degrees on the intact side, with a ratio of 0.507 (case values: prosthetic ankle ROM asymmetry: speed=0.5 m/s, ankle_position_rom_ratio_ipsi_contra=0.507, threshold=0.800, ankle_position_ipsilateral_rom_deg=10.444, ankle_position_contralateral_rom_deg=20.606; prosthetic ankle sagittal-plane range of motion differs from intact side).",
+          "feature": "prosthetic_ankle_rom_asymmetry",
+          "evidence_ids": [
+            "case:prosthetic_ankle_rom_asymmetry",
+            "context:amputee_ankle_sagittal_rom_asymmetry"
+          ],
+          "graph_path": null,
+          "source_citations": [
+            "Perry & Burnfield sagittal-plane joint motion; Hood & Lenzi Figshare ankle position fields"
+          ]
+        },
+        {
+          "text": "The prosthetic knee sagittal-plane range of motion is reduced compared to the contralateral side, indicating an altered sagittal-plane knee pattern. The prosthetic-side knee ROM is 36.088 degrees versus 53.556 degrees on the intact side, with a ratio of 0.674 (case values: prosthetic knee ROM: speed=0.5 m/s, knee_position_rom_ratio_ipsi_contra=0.674, threshold=0.800, knee_position_ipsilateral_rom_deg=36.088, knee_position_contralateral_rom_deg=53.556; prosthetic-side knee sagittal-plane range of motion is reduced versus intact side).",
+          "feature": "prosthetic_knee_reduced_rom",
+          "evidence_ids": [
+            "case:prosthetic_knee_reduced_rom",
+            "context:amputee_knee_sagittal_pattern"
+          ],
+          "graph_path": null,
+          "source_citations": [
+            "Perry & Burnfield knee motion in gait; Hood & Lenzi Figshare knee position fields"
+          ]
+        },
+        {
+          "text": "The prosthetic-side hip sagittal-plane range of motion is higher than the contralateral side, indicating a hip compensation pattern. The prosthetic-side hip ROM is 43.227 degrees versus 37.545 degrees on the intact side, with a ratio of 1.151 (case values: prosthetic hip ROM compensation: speed=0.5 m/s, hip_position_rom_ratio_ipsi_contra=1.151, threshold=1.150, hip_position_ipsilateral_rom_deg=43.227, hip_position_contralateral_rom_deg=37.545; prosthetic-side hip sagittal-plane range of motion is higher than intact side).",
+          "feature": "prosthetic_hip_compensation_rom",
+          "evidence_ids": [
+            "case:prosthetic_hip_compensation_rom",
+            "context:amputee_hip_compensation_pattern"
+          ],
+          "graph_path": null,
+          "source_citations": [
+            "Perry & Burnfield hip motion and compensations; Hood & Lenzi Figshare hip position fields"
+          ]
+        }
+      ],
+      "unsupported_claims": [
+        "The prosthetic-side hip moment peak is reduced compared to the contralateral side, indicating a joint moment asymmetry. The prosthetic-side hip moment peak is 0.245 nmkg versus 0.400 nmkg on the intact side, with a ratio of 0.612."
+      ],
+      "evaluation": {
+        "case_id": "TF06_0p5",
+        "pipeline": "embedding_rag",
+        "feature_coverage": 0.8,
+        "faithfulness": 0.8,
+        "hallucination_rate": 0.2,
+        "citation_accuracy": 1.0,
+        "graph_path_validity": null
+      }
+    },
+    {
+      "dataset": "Above-Knee Amputee Gait",
+      "case_id": "TF06_0p5",
+      "model": "qwen3:14b",
+      "method": "TGR",
+      "case_features": [
+        {
+          "name": "prosthetic_ankle_reduced_push_off_moment",
+          "value": 0.5823860467988303,
+          "evidence": "speed=0.5 m/s, ankle_plantarflexion_moment_ratio_ipsi_contra=0.582, threshold=0.750, ankle_plantarflexion_moment_ipsilateral_peak_nmkg=0.568, ankle_plantarflexion_moment_contralateral_peak_nmkg=0.975; prosthetic ankle plantarflexion moment peak is reduced versus intact side"
+        },
+        {
+          "name": "prosthetic_ankle_rom_asymmetry",
+          "value": 0.5068403603654216,
+          "evidence": "speed=0.5 m/s, ankle_position_rom_ratio_ipsi_contra=0.507, threshold=0.800, ankle_position_ipsilateral_rom_deg=10.444, ankle_position_contralateral_rom_deg=20.606; prosthetic ankle sagittal-plane range of motion differs from intact side"
+        },
+        {
+          "name": "prosthetic_knee_reduced_rom",
+          "value": 0.6738326606964666,
+          "evidence": "speed=0.5 m/s, knee_position_rom_ratio_ipsi_contra=0.674, threshold=0.800, knee_position_ipsilateral_rom_deg=36.088, knee_position_contralateral_rom_deg=53.556; prosthetic-side knee sagittal-plane range of motion is reduced versus intact side"
+        },
+        {
+          "name": "prosthetic_hip_compensation_rom",
+          "value": 1.1513560338777025,
+          "evidence": "speed=0.5 m/s, hip_position_rom_ratio_ipsi_contra=1.151, threshold=1.150, hip_position_ipsilateral_rom_deg=43.227, hip_position_contralateral_rom_deg=37.545; prosthetic-side hip sagittal-plane range of motion is higher than intact side"
+        },
+        {
+          "name": "prosthetic_hip_moment_asymmetry",
+          "value": 0.6116804937311668,
+          "evidence": "speed=0.5 m/s, hip_moment_peak_ratio_ipsi_contra=0.612, threshold=0.750, hip_moment_ipsilateral_peak_nmkg=0.245, hip_moment_contralateral_peak_nmkg=0.400; prosthetic-side hip moment peak differs from intact side"
+        }
+      ],
+      "retrieved_context_ids": [],
+      "raw_llm_answer": {
+        "summary": "The gait analysis of a left above-knee amputee walking at 0.5 m/s reveals reduced propulsion and range of motion at the prosthetic ankle, reduced knee range of motion, and compensatory hip motion on the prosthetic side. These findings are consistent with the biomechanical adaptations seen in above-knee amputees.",
+        "claims": [
+          {
+            "text": "The prosthetic ankle plantarflexion moment peak is reduced compared to the contralateral sound limb, indicating a diminished push-off contribution during gait.",
+            "features": [
+              "prosthetic_ankle_reduced_push_off_moment"
+            ],
+            "source_id": "amputee_ankle_propulsion_push_off",
+            "citation": "perry_2010_gait_analysis_normal_and_amputee_dataset (Perry/Burnfield propulsion concepts; Hood & Lenzi ankle moment fields)"
+          },
+          {
+            "text": "The prosthetic ankle exhibits a reduced sagittal-plane range of motion compared to the contralateral sound limb, indicating an ankle motion asymmetry.",
+            "features": [
+              "prosthetic_ankle_rom_asymmetry"
+            ],
+            "source_id": "amputee_ankle_sagittal_rom_asymmetry",
+            "citation": "perry_2010_gait_analysis_normal_and_amputee_dataset (Perry/Burnfield sagittal-plane motion; Hood & Lenzi ankle position fields)"
+          },
+          {
+            "text": "The prosthetic knee shows a reduced sagittal-plane range of motion compared to the contralateral sound limb, indicating an altered sagittal-plane knee pattern.",
+            "features": [
+              "prosthetic_knee_reduced_rom"
+            ],
+            "source_id": "amputee_knee_sagittal_pattern",
+            "citation": "perry_2010_gait_analysis_normal_and_amputee_dataset (Perry/Burnfield knee motion; Hood & Lenzi knee position fields)"
+          },
+          {
+            "text": "The prosthetic side hip exhibits a greater sagittal-plane range of motion compared to the contralateral sound limb, indicating a proximal compensation strategy.",
+            "features": [
+              "prosthetic_hip_compensation_rom"
+            ],
+            "source_id": "amputee_hip_compensation_pattern",
+            "citation": "perry_2010_gait_analysis_normal_and_amputee_dataset (Perry/Burnfield hip motion; Hood & Lenzi hip position fields)"
+          },
+          {
+            "text": "The prosthetic side hip moment peak is reduced compared to the contralateral sound limb, indicating a kinetic asymmetry at the hip.",
+            "features": [
+              "prosthetic_hip_moment_asymmetry"
+            ],
+            "source_id": "amputee_joint_moment_asymmetry",
+            "citation": "perry_2010_gait_analysis_normal_and_amputee_dataset (Perry/Burnfield joint kinetics; Hood & Lenzi knee/hip moment fields)"
+          }
+        ]
+      },
+      "supported_claims": [
+        {
+          "text": "The prosthetic ankle plantarflexion moment peak is reduced compared to the contralateral sound limb, indicating a diminished push-off contribution during gait (case values: prosthetic ankle push-off moment: speed=0.5 m/s, ankle_plantarflexion_moment_ratio_ipsi_contra=0.582, threshold=0.750, ankle_plantarflexion_moment_ipsilateral_peak_nmkg=0.568, ankle_plantarflexion_moment_contralateral_peak_nmkg=0.975; prosthetic ankle plantarflexion moment peak is reduced versus intact side).",
+          "feature": "prosthetic_ankle_reduced_push_off_moment",
+          "evidence_ids": [
+            "case:prosthetic_ankle_reduced_push_off_moment",
+            "node:amputee_ankle_propulsion_push_off"
+          ],
+          "graph_path": null,
+          "source_citations": [
+            "perry_2010_gait_analysis_normal_and_amputee_dataset (Perry/Burnfield propulsion concepts; Hood & Lenzi ankle moment fields)"
+          ]
+        },
+        {
+          "text": "The prosthetic ankle exhibits a reduced sagittal-plane range of motion compared to the contralateral sound limb, indicating an ankle motion asymmetry (case values: prosthetic ankle ROM asymmetry: speed=0.5 m/s, ankle_position_rom_ratio_ipsi_contra=0.507, threshold=0.800, ankle_position_ipsilateral_rom_deg=10.444, ankle_position_contralateral_rom_deg=20.606; prosthetic ankle sagittal-plane range of motion differs from intact side).",
+          "feature": "prosthetic_ankle_rom_asymmetry",
+          "evidence_ids": [
+            "case:prosthetic_ankle_rom_asymmetry",
+            "node:amputee_ankle_sagittal_rom_asymmetry"
+          ],
+          "graph_path": null,
+          "source_citations": [
+            "perry_2010_gait_analysis_normal_and_amputee_dataset (Perry/Burnfield sagittal-plane motion; Hood & Lenzi ankle position fields)"
+          ]
+        },
+        {
+          "text": "The prosthetic knee shows a reduced sagittal-plane range of motion compared to the contralateral sound limb, indicating an altered sagittal-plane knee pattern (case values: prosthetic knee ROM: speed=0.5 m/s, knee_position_rom_ratio_ipsi_contra=0.674, threshold=0.800, knee_position_ipsilateral_rom_deg=36.088, knee_position_contralateral_rom_deg=53.556; prosthetic-side knee sagittal-plane range of motion is reduced versus intact side).",
+          "feature": "prosthetic_knee_reduced_rom",
+          "evidence_ids": [
+            "case:prosthetic_knee_reduced_rom",
+            "node:amputee_knee_sagittal_pattern"
+          ],
+          "graph_path": null,
+          "source_citations": [
+            "perry_2010_gait_analysis_normal_and_amputee_dataset (Perry/Burnfield knee motion; Hood & Lenzi knee position fields)"
+          ]
+        },
+        {
+          "text": "The prosthetic side hip exhibits a greater sagittal-plane range of motion compared to the contralateral sound limb, indicating a proximal compensation strategy (case values: prosthetic hip ROM compensation: speed=0.5 m/s, hip_position_rom_ratio_ipsi_contra=1.151, threshold=1.150, hip_position_ipsilateral_rom_deg=43.227, hip_position_contralateral_rom_deg=37.545; prosthetic-side hip sagittal-plane range of motion is higher than intact side).",
+          "feature": "prosthetic_hip_compensation_rom",
+          "evidence_ids": [
+            "case:prosthetic_hip_compensation_rom",
+            "node:amputee_hip_compensation_pattern"
+          ],
+          "graph_path": null,
+          "source_citations": [
+            "perry_2010_gait_analysis_normal_and_amputee_dataset (Perry/Burnfield hip motion; Hood & Lenzi hip position fields)"
+          ]
+        },
+        {
+          "text": "The prosthetic side hip moment peak is reduced compared to the contralateral sound limb, indicating a kinetic asymmetry at the hip (case values: prosthetic hip moment asymmetry: speed=0.5 m/s, hip_moment_peak_ratio_ipsi_contra=0.612, threshold=0.750, hip_moment_ipsilateral_peak_nmkg=0.245, hip_moment_contralateral_peak_nmkg=0.400; prosthetic-side hip moment peak differs from intact side).",
+          "feature": "prosthetic_hip_moment_asymmetry",
+          "evidence_ids": [
+            "case:prosthetic_hip_moment_asymmetry",
+            "node:amputee_joint_moment_asymmetry"
+          ],
+          "graph_path": null,
+          "source_citations": [
+            "perry_2010_gait_analysis_normal_and_amputee_dataset (Perry/Burnfield joint kinetics; Hood & Lenzi knee/hip moment fields)"
+          ]
+        }
+      ],
+      "unsupported_claims": [],
+      "evaluation": {
+        "case_id": "TF06_0p5",
+        "pipeline": "vectorless_tree_rag",
+        "feature_coverage": 1.0,
+        "faithfulness": 1.0,
+        "hallucination_rate": 0.0,
+        "citation_accuracy": 1.0,
+        "graph_path_validity": null
+      }
+    }
+  ]
+}

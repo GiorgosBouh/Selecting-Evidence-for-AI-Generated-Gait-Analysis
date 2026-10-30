@@ -1,0 +1,57 @@
+{
+  "version": "2026-07-03",
+  "release_status": "FR/TGR prompt source is included. The OGR run artifacts and audit/sensitivity runner are not included in this release draft; see the root README.",
+  "notes": "Prompt templates use placeholders in braces. Runtime scripts fill case evidence, retrieved contexts, pathology scope note, and context key. The included runner can execute the primary FR/TGR prompt. Earlier notes report that OGR and audit/sensitivity runs used the templates below, but their runner and final OGR run files are missing from this release draft.",
+  "primary_full_run_fr_tgr_prompt": {
+    "source_file": "scripts/run_three_llm_full_dataset_pilot.py",
+    "source_function": "answer_from_context",
+    "used_for": [
+      "primary FR full runs",
+      "primary TGR full runs",
+      "primary-prompt OGR/GADO full rerun used for the final main FR/TGR/OGR comparison"
+    ],
+    "template": "Answer based only on the case evidence and retrieved context.\n\nCase ID: {case_id}\nCase evidence:\n{case_evidence}\n\nRetrieved context:\n{retrieved_context_json}\n\nWrite concise, clinically useful gait-interpretation findings.\nFor biomechanical cases, explain what the measured feature means for gait function or protocol interpretation: forward progression, cadence/timing, swing phase, stance phase, double support/stability, left-right asymmetry, variability, turning performance, speed segments, repeated task segments, prosthetic-vs-intact limb provenance, sagittal-plane joint ROM, joint moment asymmetry, propulsion/push-off, or measurement provenance.\nRelate the pattern to the dataset pathology label only when the retrieved context supports that interpretation.\nThis is not a diagnosis task. Do not make a new diagnosis, infer pain severity, prescribe treatment, or infer joint angles/step width/ROM unless explicitly present in the case evidence.\nEvery claim must preserve exact case values and healthy-reference z-scores for the features it uses.\nIf a feature is marked approximate=true, call it approximate in the claim.\nDo not write metadata-only claims such as \"clinical score available\", \"visual gait impairment was noted\", \"gait events were available\", or \"U-turn boundaries were available\" unless the claim also interprets a biomechanical gait finding.\nFor each claim, copy all relevant feature IDs from the case evidence.\nThe final claims must cover every case feature listed in the retrieved context matched_features fields.\nGenerate one claim per matched case feature unless two closely related features are combined; if combined, the claim must name every combined feature and include exact values for each.\nUse only source_id values that appear in the retrieved context.\nDo not invent unsupported pathology labels or measurements.\n{pathology_scope_note}\n\nReturn only JSON:\n{\n  \"summary\": \"short paragraph\",\n  \"claims\": [\n    {\n      \"text\": \"claim grounded in the context\",\n      \"features\": [\"feature_id\"],\n      \"{context_key}\": \"supporting id\",\n      \"citation\": \"citation string from context\"\n    }\n  ]\n}\n"
+  },
+  "audit_sensitivity_ogr_prompt": {
+    "source_file": "scripts/run_revision_ablation_experiment.py",
+    "source_function": "answer_from_context",
+    "used_for": [
+      "coverage-control ablations",
+      "modern retriever sensitivity runs",
+      "earlier audit-prompt OGR/GADO run",
+      "OGR coverage-repair diagnostic; not used for the final primary FR/TGR/OGR comparison"
+    ],
+    "template": "Answer based only on the case evidence and retrieved context.\n\nCase ID: {case_id}\nCase features:\n{case_features_json}\n\nRetrieved context:\n{retrieved_context_json}\n\nWrite concise, audit-ready gait-interpretation findings.\nRules:\n- Use only the case evidence and retrieved context.\n- Generate one claim per matched case feature unless two closely related features are combined.\n- Preserve exact case values and feature IDs for every claim.\n- Use only source_id values that appear in retrieved context.\n- Do not add diagnosis, treatment, pain, causality, severity, or unmeasured variables.\n- If evidence supports only a measured pattern, state only that measured pattern.\n\nReturn only JSON:\n{\n  \"summary\": \"short paragraph\",\n  \"claims\": [\n    {\n      \"text\": \"claim grounded in the context\",\n      \"features\": [\"feature_id\"],\n      \"source_id\": \"supporting id\",\n      \"citation\": \"citation string from context\"\n    }\n  ]\n}\n"
+  },
+  "ollama_generation_settings": {
+    "format": "json",
+    "stream": false,
+    "temperature": 0,
+    "think": false
+  },
+  "expected_output_schema": {
+    "summary": "short paragraph",
+    "claims": [
+      {
+        "text": "claim grounded in the context",
+        "features": [
+          "feature_id"
+        ],
+        "source_id_or_context_id": "supporting retrieved evidence id",
+        "citation": "citation string from context"
+      }
+    ]
+  },
+  "ogr_graph_retrieval": {
+    "ontology": "Gait Analysis Domain Ontology (GADO)",
+    "owl_file": "resources/ontologies/gait-analysis-domain-ontology/Gait Analysis Domain Ontology.owl",
+    "feature_mapping": "resources/gado_feature_mapping.json",
+    "graph_edges": [
+      "subclass relations",
+      "object-property domain/range links"
+    ],
+    "graph_hops": 1,
+    "primary_prompt_output": "Not included in this release draft; earlier notes named outputs/ontology_graph_full_primary_prompt_2026-07-02.jsonl",
+    "scope_note": "The primary-prompt OGR rerun is used for the final main FR/TGR/OGR comparison; audit-prompt OGR outputs are diagnostic only."
+  }
+}
