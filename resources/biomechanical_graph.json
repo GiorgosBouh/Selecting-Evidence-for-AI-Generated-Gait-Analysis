@@ -1,0 +1,594 @@
+[
+  {
+    "subject": "reduced_step_length_ugs",
+    "predicate": "is_abnormal_state_of",
+    "object": "step_length",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:37,54,73"
+  },
+  {
+    "subject": "reduced_step_length_fgs",
+    "predicate": "is_abnormal_state_of",
+    "object": "step_length",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:37,54,73"
+  },
+  {
+    "subject": "reduced_step_length_ugs",
+    "predicate": "indicates",
+    "object": "shortened_step_advancement",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:37,54"
+  },
+  {
+    "subject": "reduced_step_length_fgs",
+    "predicate": "indicates",
+    "object": "shortened_step_advancement",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:37,54"
+  },
+  {
+    "subject": "shortened_step_advancement",
+    "predicate": "affects",
+    "object": "spatiotemporal_gait_pattern",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:36,37"
+  },
+  {
+    "subject": "shortened_step_advancement",
+    "predicate": "can_reduce",
+    "object": "walking_speed",
+    "source": "fukuchi_2019_walking_speed_review",
+    "source_id": "fukuchi_2019_walking_speed_review",
+    "locator": "local_xml_review"
+  },
+  {
+    "subject": "reduced_stride_length_ugs",
+    "predicate": "is_abnormal_state_of",
+    "object": "stride_length",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:30,37,91"
+  },
+  {
+    "subject": "reduced_stride_length_fgs",
+    "predicate": "is_abnormal_state_of",
+    "object": "stride_length",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:30,37,91"
+  },
+  {
+    "subject": "reduced_stride_length_ugs",
+    "predicate": "indicates",
+    "object": "shortened_stride_progression",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:30,37"
+  },
+  {
+    "subject": "reduced_stride_length_fgs",
+    "predicate": "indicates",
+    "object": "shortened_stride_progression",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:30,37"
+  },
+  {
+    "subject": "shortened_stride_progression",
+    "predicate": "affects",
+    "object": "spatiotemporal_gait_pattern",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:36,37"
+  },
+  {
+    "subject": "stride_length",
+    "predicate": "contributes_to",
+    "object": "walking_speed",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:30,37"
+  },
+  {
+    "subject": "increased_cadence_ugs",
+    "predicate": "is_abnormal_state_of",
+    "object": "cadence",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:30,442,463"
+  },
+  {
+    "subject": "increased_cadence_fgs",
+    "predicate": "is_abnormal_state_of",
+    "object": "cadence",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:30,442,463"
+  },
+  {
+    "subject": "increased_cadence_ugs",
+    "predicate": "modifies",
+    "object": "temporal_gait_pattern",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:30,442"
+  },
+  {
+    "subject": "increased_cadence_fgs",
+    "predicate": "modifies",
+    "object": "temporal_gait_pattern",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:30,442"
+  },
+  {
+    "subject": "cadence",
+    "predicate": "contributes_to",
+    "object": "walking_speed",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:30,442"
+  },
+  {
+    "subject": "temporal_gait_pattern",
+    "predicate": "relates_to",
+    "object": "spatiotemporal_gait_pattern",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:30,36"
+  },
+  {
+    "subject": "prolonged_double_support_ugs",
+    "predicate": "is_abnormal_state_of",
+    "object": "double_support",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:45,68,71"
+  },
+  {
+    "subject": "prolonged_double_support_fgs",
+    "predicate": "is_abnormal_state_of",
+    "object": "double_support",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:45,68,71"
+  },
+  {
+    "subject": "prolonged_double_support_ugs",
+    "predicate": "indicates",
+    "object": "increased_bipedal_support_time",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:45,68,71"
+  },
+  {
+    "subject": "prolonged_double_support_fgs",
+    "predicate": "indicates",
+    "object": "increased_bipedal_support_time",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:45,68,71"
+  },
+  {
+    "subject": "increased_bipedal_support_time",
+    "predicate": "relates_to",
+    "object": "stance_phase_timing",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:68,71"
+  },
+  {
+    "subject": "increased_bipedal_support_time",
+    "predicate": "can_reflect",
+    "object": "cautious_gait_strategy",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:45,68,71"
+  },
+  {
+    "subject": "reduced_single_support_ugs",
+    "predicate": "is_abnormal_state_of",
+    "object": "single_support",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:69,71,84"
+  },
+  {
+    "subject": "reduced_single_support_fgs",
+    "predicate": "is_abnormal_state_of",
+    "object": "single_support",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:69,71,84"
+  },
+  {
+    "subject": "reduced_single_support_ugs",
+    "predicate": "indicates",
+    "object": "reduced_unipedal_stance_time",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:69,71,84"
+  },
+  {
+    "subject": "reduced_single_support_fgs",
+    "predicate": "indicates",
+    "object": "reduced_unipedal_stance_time",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:69,71,84"
+  },
+  {
+    "subject": "reduced_unipedal_stance_time",
+    "predicate": "affects",
+    "object": "stance_phase_mechanics",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:69,71,84"
+  },
+  {
+    "subject": "reduced_velocity_ugs",
+    "predicate": "is_abnormal_state_of",
+    "object": "walking_speed",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:22,31,36"
+  },
+  {
+    "subject": "reduced_velocity_fgs",
+    "predicate": "is_abnormal_state_of",
+    "object": "walking_speed",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:22,31,36"
+  },
+  {
+    "subject": "reduced_velocity_ugs",
+    "predicate": "indicates",
+    "object": "slower_forward_progression",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:22,31,36"
+  },
+  {
+    "subject": "reduced_velocity_fgs",
+    "predicate": "indicates",
+    "object": "slower_forward_progression",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:22,31,36"
+  },
+  {
+    "subject": "slower_forward_progression",
+    "predicate": "summarizes",
+    "object": "spatiotemporal_gait_pattern",
+    "source": "fukuchi_2019_walking_speed_review",
+    "source_id": "fukuchi_2019_walking_speed_review",
+    "locator": "local_xml_review"
+  },
+  {
+    "subject": "gait_cycle",
+    "predicate": "has_phase",
+    "object": "stance_phase",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:24,34,35"
+  },
+  {
+    "subject": "gait_cycle",
+    "predicate": "has_phase",
+    "object": "swing_phase",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:24,34,35"
+  },
+  {
+    "subject": "stance_phase",
+    "predicate": "includes",
+    "object": "initial_contact",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:24,25,35"
+  },
+  {
+    "subject": "stance_phase",
+    "predicate": "includes",
+    "object": "loading_response",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:24,25,42"
+  },
+  {
+    "subject": "stance_phase",
+    "predicate": "includes",
+    "object": "mid_stance",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:68,85"
+  },
+  {
+    "subject": "stance_phase",
+    "predicate": "includes",
+    "object": "terminal_stance",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:68,85"
+  },
+  {
+    "subject": "stance_phase",
+    "predicate": "includes",
+    "object": "pre_swing",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:24,25,42"
+  },
+  {
+    "subject": "swing_phase",
+    "predicate": "includes",
+    "object": "initial_swing",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:43,44,68"
+  },
+  {
+    "subject": "swing_phase",
+    "predicate": "includes",
+    "object": "mid_swing",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:43,44,68"
+  },
+  {
+    "subject": "swing_phase",
+    "predicate": "includes",
+    "object": "terminal_swing",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:43,44,68"
+  },
+  {
+    "subject": "double_support",
+    "predicate": "occurs_during",
+    "object": "loading_response",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:45,68,71"
+  },
+  {
+    "subject": "double_support",
+    "predicate": "occurs_during",
+    "object": "pre_swing",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:45,68,71"
+  },
+  {
+    "subject": "single_support",
+    "predicate": "occurs_during",
+    "object": "mid_stance",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:69,71,84"
+  },
+  {
+    "subject": "single_support",
+    "predicate": "occurs_during",
+    "object": "terminal_stance",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:69,71,84"
+  },
+  {
+    "subject": "step_length",
+    "predicate": "is_spatiotemporal_parameter",
+    "object": "true",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:37,54"
+  },
+  {
+    "subject": "stride_length",
+    "predicate": "is_spatiotemporal_parameter",
+    "object": "true",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:30,37"
+  },
+  {
+    "subject": "cadence",
+    "predicate": "is_temporal_parameter",
+    "object": "true",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:30,442"
+  },
+  {
+    "subject": "walking_speed",
+    "predicate": "is_spatiotemporal_parameter",
+    "object": "true",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "pdf_pages:22,31,36"
+  },
+  {
+    "subject": "markerless_video_gait_analysis",
+    "predicate": "estimates",
+    "object": "spatiotemporal_gait_parameters",
+    "source": "scataglini_2024_markerless_review",
+    "source_id": "scataglini_2024_markerless_review",
+    "locator": "local_xml_review"
+  },
+  {
+    "subject": "wearable_sensor_gait_detection",
+    "predicate": "detects",
+    "object": "gait_events",
+    "source": "prasanth_2021_wearable_gait_detection_review",
+    "source_id": "prasanth_2021_wearable_gait_detection_review",
+    "locator": "local_xml_review"
+  },
+  {
+    "subject": "reduced_approximate_walking_speed",
+    "predicate": "indicates",
+    "object": "slower_forward_progression",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "distance-time gait parameters; Data_2 approximate"
+  },
+  {
+    "subject": "reduced_approximate_step_length",
+    "predicate": "indicates",
+    "object": "shortened_step_advancement",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "distance-time gait parameters; Data_2 approximate"
+  },
+  {
+    "subject": "reduced_approximate_stride_length",
+    "predicate": "indicates",
+    "object": "shortened_stride_progression",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "distance-time gait parameters; Data_2 approximate"
+  },
+  {
+    "subject": "reduced_cadence",
+    "predicate": "modifies",
+    "object": "temporal_gait_pattern",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "distance-time gait parameters"
+  },
+  {
+    "subject": "increased_cadence",
+    "predicate": "modifies",
+    "object": "temporal_gait_pattern",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "distance-time gait parameters"
+  },
+  {
+    "subject": "prolonged_stride_time",
+    "predicate": "indicates",
+    "object": "slower_gait_cycle_timing",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "gait-cycle timing"
+  },
+  {
+    "subject": "increased_stride_time_variability",
+    "predicate": "indicates",
+    "object": "less_consistent_gait_cycle_timing",
+    "source": "clinical_gait_analysis_reviews",
+    "source_id": "clinical_gait_analysis_reviews",
+    "locator": "temporal variability context"
+  },
+  {
+    "subject": "increased_stride_time_asymmetry",
+    "predicate": "indicates",
+    "object": "left_right_temporal_asymmetry",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "gait-cycle timing"
+  },
+  {
+    "subject": "prolonged_swing_time",
+    "predicate": "relates_to",
+    "object": "swing_phase_timing",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "swing phase timing"
+  },
+  {
+    "subject": "increased_swing_time_asymmetry",
+    "predicate": "indicates",
+    "object": "left_right_temporal_asymmetry",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "swing phase timing"
+  },
+  {
+    "subject": "prolonged_stance_time",
+    "predicate": "relates_to",
+    "object": "stance_phase_timing",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "stance phase timing"
+  },
+  {
+    "subject": "increased_stance_time_asymmetry",
+    "predicate": "indicates",
+    "object": "left_right_temporal_asymmetry",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "stance phase timing"
+  },
+  {
+    "subject": "increased_double_support_percentage",
+    "predicate": "can_reflect",
+    "object": "cautious_gait_strategy",
+    "source": "perry_2010_gait_analysis_normal",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "double support and stance timing"
+  },
+  {
+    "subject": "prolonged_uturn_duration",
+    "predicate": "indicates",
+    "object": "slower_turning_performance",
+    "source": "clinical_gait_signals_2025",
+    "source_id": "clinical_gait_signals_2025",
+    "locator": "U-turn boundaries and protocol timing"
+  },
+  {
+    "subject": "prosthetic_ankle_reduced_push_off_moment",
+    "predicate": "indicates",
+    "object": "reduced_prosthetic_push_off",
+    "source": "hood_lenzi_above_knee_amputee_figshare_2020",
+    "source_id": "hood_lenzi_above_knee_amputee_figshare_2020",
+    "locator": "processed TF*_DATA.mat side-specific kinematic/kinetic fields"
+  },
+  {
+    "subject": "prosthetic_ankle_rom_asymmetry",
+    "predicate": "indicates",
+    "object": "prosthetic_ankle_sagittal_motion_asymmetry",
+    "source": "hood_lenzi_above_knee_amputee_figshare_2020",
+    "source_id": "hood_lenzi_above_knee_amputee_figshare_2020",
+    "locator": "processed TF*_DATA.mat side-specific kinematic/kinetic fields"
+  },
+  {
+    "subject": "prosthetic_knee_reduced_rom",
+    "predicate": "indicates",
+    "object": "altered_sagittal_knee_pattern",
+    "source": "hood_lenzi_above_knee_amputee_figshare_2020",
+    "source_id": "hood_lenzi_above_knee_amputee_figshare_2020",
+    "locator": "processed TF*_DATA.mat side-specific kinematic/kinetic fields"
+  },
+  {
+    "subject": "prosthetic_hip_compensation_rom",
+    "predicate": "can_reflect",
+    "object": "proximal_hip_compensation",
+    "source": "hood_lenzi_above_knee_amputee_figshare_2020",
+    "source_id": "hood_lenzi_above_knee_amputee_figshare_2020",
+    "locator": "processed TF*_DATA.mat side-specific kinematic/kinetic fields"
+  },
+  {
+    "subject": "prosthetic_knee_moment_asymmetry",
+    "predicate": "indicates",
+    "object": "prosthetic_knee_kinetic_asymmetry",
+    "source": "hood_lenzi_above_knee_amputee_figshare_2020",
+    "source_id": "hood_lenzi_above_knee_amputee_figshare_2020",
+    "locator": "processed TF*_DATA.mat side-specific kinematic/kinetic fields"
+  },
+  {
+    "subject": "prosthetic_hip_moment_asymmetry",
+    "predicate": "indicates",
+    "object": "prosthetic_hip_kinetic_asymmetry",
+    "source": "hood_lenzi_above_knee_amputee_figshare_2020",
+    "source_id": "hood_lenzi_above_knee_amputee_figshare_2020",
+    "locator": "processed TF*_DATA.mat side-specific kinematic/kinetic fields"
+  }
+]
