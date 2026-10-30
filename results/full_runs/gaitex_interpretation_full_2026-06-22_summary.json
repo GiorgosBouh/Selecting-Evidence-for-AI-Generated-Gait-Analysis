@@ -1,0 +1,1549 @@
+{
+  "input_record_count": 219,
+  "analyzable_record_count": 219,
+  "status_counts": {
+    "ok": 219
+  },
+  "dataset_record_counts": {
+    "GAITEX": 219
+  },
+  "model_record_counts": {
+    "mistral-small:24b": 73,
+    "qwen3:14b": 73,
+    "llama3.1:8b": 73
+  },
+  "groups": {
+    "overall": {
+      "label": "overall",
+      "n": 219,
+      "datasets": {
+        "GAITEX": 219
+      },
+      "models": {
+        "mistral-small:24b": 73,
+        "qwen3:14b": 73,
+        "llama3.1:8b": 73
+      },
+      "feature_count": {
+        "mean": 2.986301,
+        "sd": 0.999906,
+        "min": 2.0,
+        "max": 4.0
+      },
+      "metrics": {
+        "feature_coverage": {
+          "n": 219,
+          "embedding_mean": 0.977169,
+          "vectorless_mean": 0.984018,
+          "mean_diff_vectorless_minus_embedding": 0.006849,
+          "diff_sd": 0.114372,
+          "bootstrap_ci95": [
+            -0.007991,
+            0.022831
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 17,
+            "ties": 191,
+            "embedding_better_or_larger": 11,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 28,
+            "positive": 17,
+            "negative": 11,
+            "ties": 191,
+            "p_two_sided": 0.344928
+          }
+        },
+        "faithfulness": {
+          "n": 219,
+          "embedding_mean": 0.972604,
+          "vectorless_mean": 0.979377,
+          "mean_diff_vectorless_minus_embedding": 0.006774,
+          "diff_sd": 0.119298,
+          "bootstrap_ci95": [
+            -0.009056,
+            0.02306
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 11,
+            "ties": 199,
+            "embedding_better_or_larger": 9,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 20,
+            "positive": 11,
+            "negative": 9,
+            "ties": 199,
+            "p_two_sided": 0.823803
+          }
+        },
+        "hallucination_rate": {
+          "n": 219,
+          "embedding_mean": 0.027396,
+          "vectorless_mean": 0.020623,
+          "mean_diff_vectorless_minus_embedding": -0.006774,
+          "diff_sd": 0.119298,
+          "bootstrap_ci95": [
+            -0.023136,
+            0.009056
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 11,
+            "ties": 199,
+            "embedding_better_or_larger": 9,
+            "direction": "lower_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 20,
+            "positive": 9,
+            "negative": 11,
+            "ties": 199,
+            "p_two_sided": 0.823803
+          }
+        },
+        "citation_accuracy": {
+          "n": 219,
+          "embedding_mean": 1.0,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.0,
+          "diff_sd": 0.0,
+          "bootstrap_ci95": [
+            0.0,
+            0.0
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 219,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 0,
+            "positive": 0,
+            "negative": 0,
+            "ties": 219,
+            "p_two_sided": 1.0
+          }
+        },
+        "claim_count": {
+          "n": 219,
+          "embedding_mean": 2.652968,
+          "vectorless_mean": 2.675799,
+          "mean_diff_vectorless_minus_embedding": 0.022831,
+          "diff_sd": 0.518541,
+          "bootstrap_ci95": [
+            -0.041096,
+            0.09589
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 30,
+            "ties": 166,
+            "embedding_better_or_larger": 23,
+            "direction": "count_only"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 53,
+            "positive": 30,
+            "negative": 23,
+            "ties": 166,
+            "p_two_sided": 0.410103
+          }
+        },
+        "quality_score": {
+          "n": 219,
+          "embedding_mean": 2.922376,
+          "vectorless_mean": 2.942773,
+          "mean_diff_vectorless_minus_embedding": 0.020396,
+          "diff_sd": 0.286357,
+          "bootstrap_ci95": [
+            -0.017426,
+            0.05822
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 26,
+            "ties": 174,
+            "embedding_better_or_larger": 19,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 45,
+            "positive": 26,
+            "negative": 19,
+            "ties": 174,
+            "p_two_sided": 0.371298
+          }
+        }
+      },
+      "top_embedding_contexts": [
+        {
+          "id": "gaitex_dataset_motion_capture_provenance",
+          "count": 219
+        },
+        {
+          "id": "gaitex_repeated_task_context",
+          "count": 219
+        },
+        {
+          "id": "gaitex_speed_protocol_context",
+          "count": 108
+        }
+      ],
+      "top_vectorless_nodes": [
+        {
+          "id": "gaitex_dataset_motion_capture_provenance",
+          "count": 219
+        },
+        {
+          "id": "gaitex_repeated_task_context",
+          "count": 219
+        },
+        {
+          "id": "gaitex_speed_protocol_context",
+          "count": 108
+        }
+      ]
+    },
+    "dataset=GAITEX": {
+      "label": "dataset=GAITEX",
+      "n": 219,
+      "datasets": {
+        "GAITEX": 219
+      },
+      "models": {
+        "mistral-small:24b": 73,
+        "qwen3:14b": 73,
+        "llama3.1:8b": 73
+      },
+      "feature_count": {
+        "mean": 2.986301,
+        "sd": 0.999906,
+        "min": 2.0,
+        "max": 4.0
+      },
+      "metrics": {
+        "feature_coverage": {
+          "n": 219,
+          "embedding_mean": 0.977169,
+          "vectorless_mean": 0.984018,
+          "mean_diff_vectorless_minus_embedding": 0.006849,
+          "diff_sd": 0.114372,
+          "bootstrap_ci95": [
+            -0.007991,
+            0.022831
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 17,
+            "ties": 191,
+            "embedding_better_or_larger": 11,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 28,
+            "positive": 17,
+            "negative": 11,
+            "ties": 191,
+            "p_two_sided": 0.344928
+          }
+        },
+        "faithfulness": {
+          "n": 219,
+          "embedding_mean": 0.972604,
+          "vectorless_mean": 0.979377,
+          "mean_diff_vectorless_minus_embedding": 0.006774,
+          "diff_sd": 0.119298,
+          "bootstrap_ci95": [
+            -0.009056,
+            0.02306
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 11,
+            "ties": 199,
+            "embedding_better_or_larger": 9,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 20,
+            "positive": 11,
+            "negative": 9,
+            "ties": 199,
+            "p_two_sided": 0.823803
+          }
+        },
+        "hallucination_rate": {
+          "n": 219,
+          "embedding_mean": 0.027396,
+          "vectorless_mean": 0.020623,
+          "mean_diff_vectorless_minus_embedding": -0.006774,
+          "diff_sd": 0.119298,
+          "bootstrap_ci95": [
+            -0.023136,
+            0.009056
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 11,
+            "ties": 199,
+            "embedding_better_or_larger": 9,
+            "direction": "lower_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 20,
+            "positive": 9,
+            "negative": 11,
+            "ties": 199,
+            "p_two_sided": 0.823803
+          }
+        },
+        "citation_accuracy": {
+          "n": 219,
+          "embedding_mean": 1.0,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.0,
+          "diff_sd": 0.0,
+          "bootstrap_ci95": [
+            0.0,
+            0.0
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 219,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 0,
+            "positive": 0,
+            "negative": 0,
+            "ties": 219,
+            "p_two_sided": 1.0
+          }
+        },
+        "claim_count": {
+          "n": 219,
+          "embedding_mean": 2.652968,
+          "vectorless_mean": 2.675799,
+          "mean_diff_vectorless_minus_embedding": 0.022831,
+          "diff_sd": 0.518541,
+          "bootstrap_ci95": [
+            -0.041096,
+            0.09589
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 30,
+            "ties": 166,
+            "embedding_better_or_larger": 23,
+            "direction": "count_only"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 53,
+            "positive": 30,
+            "negative": 23,
+            "ties": 166,
+            "p_two_sided": 0.410103
+          }
+        },
+        "quality_score": {
+          "n": 219,
+          "embedding_mean": 2.922376,
+          "vectorless_mean": 2.942773,
+          "mean_diff_vectorless_minus_embedding": 0.020396,
+          "diff_sd": 0.286357,
+          "bootstrap_ci95": [
+            -0.017426,
+            0.05822
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 26,
+            "ties": 174,
+            "embedding_better_or_larger": 19,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 45,
+            "positive": 26,
+            "negative": 19,
+            "ties": 174,
+            "p_two_sided": 0.371298
+          }
+        }
+      },
+      "top_embedding_contexts": [
+        {
+          "id": "gaitex_dataset_motion_capture_provenance",
+          "count": 219
+        },
+        {
+          "id": "gaitex_repeated_task_context",
+          "count": 219
+        },
+        {
+          "id": "gaitex_speed_protocol_context",
+          "count": 108
+        }
+      ],
+      "top_vectorless_nodes": [
+        {
+          "id": "gaitex_dataset_motion_capture_provenance",
+          "count": 219
+        },
+        {
+          "id": "gaitex_repeated_task_context",
+          "count": 219
+        },
+        {
+          "id": "gaitex_speed_protocol_context",
+          "count": 108
+        }
+      ]
+    },
+    "model=llama3.1:8b": {
+      "label": "model=llama3.1:8b",
+      "n": 73,
+      "datasets": {
+        "GAITEX": 73
+      },
+      "models": {
+        "llama3.1:8b": 73
+      },
+      "feature_count": {
+        "mean": 2.986301,
+        "sd": 0.999906,
+        "min": 2.0,
+        "max": 4.0
+      },
+      "metrics": {
+        "feature_coverage": {
+          "n": 73,
+          "embedding_mean": 0.982877,
+          "vectorless_mean": 0.976027,
+          "mean_diff_vectorless_minus_embedding": -0.006849,
+          "diff_sd": 0.130677,
+          "bootstrap_ci95": [
+            -0.037671,
+            0.023973
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 3,
+            "ties": 65,
+            "embedding_better_or_larger": 5,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 8,
+            "positive": 3,
+            "negative": 5,
+            "ties": 65,
+            "p_two_sided": 0.726562
+          }
+        },
+        "faithfulness": {
+          "n": 73,
+          "embedding_mean": 0.917811,
+          "vectorless_mean": 0.938132,
+          "mean_diff_vectorless_minus_embedding": 0.020321,
+          "diff_sd": 0.205962,
+          "bootstrap_ci95": [
+            -0.028993,
+            0.069407
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 11,
+            "ties": 53,
+            "embedding_better_or_larger": 9,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 20,
+            "positive": 11,
+            "negative": 9,
+            "ties": 53,
+            "p_two_sided": 0.823803
+          }
+        },
+        "hallucination_rate": {
+          "n": 73,
+          "embedding_mean": 0.082189,
+          "vectorless_mean": 0.061868,
+          "mean_diff_vectorless_minus_embedding": -0.020321,
+          "diff_sd": 0.205962,
+          "bootstrap_ci95": [
+            -0.069634,
+            0.028766
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 11,
+            "ties": 53,
+            "embedding_better_or_larger": 9,
+            "direction": "lower_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 20,
+            "positive": 9,
+            "negative": 11,
+            "ties": 53,
+            "p_two_sided": 0.823803
+          }
+        },
+        "citation_accuracy": {
+          "n": 73,
+          "embedding_mean": 1.0,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.0,
+          "diff_sd": 0.0,
+          "bootstrap_ci95": [
+            0.0,
+            0.0
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 73,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 0,
+            "positive": 0,
+            "negative": 0,
+            "ties": 73,
+            "p_two_sided": 1.0
+          }
+        },
+        "claim_count": {
+          "n": 73,
+          "embedding_mean": 2.712329,
+          "vectorless_mean": 2.835616,
+          "mean_diff_vectorless_minus_embedding": 0.123288,
+          "diff_sd": 0.572072,
+          "bootstrap_ci95": [
+            -0.013699,
+            0.260274
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 17,
+            "ties": 48,
+            "embedding_better_or_larger": 8,
+            "direction": "count_only"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 25,
+            "positive": 17,
+            "negative": 8,
+            "ties": 48,
+            "p_two_sided": 0.107752
+          }
+        },
+        "quality_score": {
+          "n": 73,
+          "embedding_mean": 2.818499,
+          "vectorless_mean": 2.85229,
+          "mean_diff_vectorless_minus_embedding": 0.033792,
+          "diff_sd": 0.473124,
+          "bootstrap_ci95": [
+            -0.0742,
+            0.147715
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 12,
+            "ties": 48,
+            "embedding_better_or_larger": 13,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 25,
+            "positive": 12,
+            "negative": 13,
+            "ties": 48,
+            "p_two_sided": 1.0
+          }
+        }
+      },
+      "top_embedding_contexts": [
+        {
+          "id": "gaitex_dataset_motion_capture_provenance",
+          "count": 73
+        },
+        {
+          "id": "gaitex_repeated_task_context",
+          "count": 73
+        },
+        {
+          "id": "gaitex_speed_protocol_context",
+          "count": 36
+        }
+      ],
+      "top_vectorless_nodes": [
+        {
+          "id": "gaitex_dataset_motion_capture_provenance",
+          "count": 73
+        },
+        {
+          "id": "gaitex_repeated_task_context",
+          "count": 73
+        },
+        {
+          "id": "gaitex_speed_protocol_context",
+          "count": 36
+        }
+      ]
+    },
+    "model=mistral-small:24b": {
+      "label": "model=mistral-small:24b",
+      "n": 73,
+      "datasets": {
+        "GAITEX": 73
+      },
+      "models": {
+        "mistral-small:24b": 73
+      },
+      "feature_count": {
+        "mean": 2.986301,
+        "sd": 0.999906,
+        "min": 2.0,
+        "max": 4.0
+      },
+      "metrics": {
+        "feature_coverage": {
+          "n": 73,
+          "embedding_mean": 0.972603,
+          "vectorless_mean": 0.976027,
+          "mean_diff_vectorless_minus_embedding": 0.003425,
+          "diff_sd": 0.127497,
+          "bootstrap_ci95": [
+            -0.023973,
+            0.034247
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 7,
+            "ties": 60,
+            "embedding_better_or_larger": 6,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 13,
+            "positive": 7,
+            "negative": 6,
+            "ties": 60,
+            "p_two_sided": 1.0
+          }
+        },
+        "faithfulness": {
+          "n": 73,
+          "embedding_mean": 1.0,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.0,
+          "diff_sd": 0.0,
+          "bootstrap_ci95": [
+            0.0,
+            0.0
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 73,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 0,
+            "positive": 0,
+            "negative": 0,
+            "ties": 73,
+            "p_two_sided": 1.0
+          }
+        },
+        "hallucination_rate": {
+          "n": 73,
+          "embedding_mean": 0.0,
+          "vectorless_mean": 0.0,
+          "mean_diff_vectorless_minus_embedding": 0.0,
+          "diff_sd": 0.0,
+          "bootstrap_ci95": [
+            0.0,
+            0.0
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 73,
+            "embedding_better_or_larger": 0,
+            "direction": "lower_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 0,
+            "positive": 0,
+            "negative": 0,
+            "ties": 73,
+            "p_two_sided": 1.0
+          }
+        },
+        "citation_accuracy": {
+          "n": 73,
+          "embedding_mean": 1.0,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.0,
+          "diff_sd": 0.0,
+          "bootstrap_ci95": [
+            0.0,
+            0.0
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 73,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 0,
+            "positive": 0,
+            "negative": 0,
+            "ties": 73,
+            "p_two_sided": 1.0
+          }
+        },
+        "claim_count": {
+          "n": 73,
+          "embedding_mean": 2.821918,
+          "vectorless_mean": 2.69863,
+          "mean_diff_vectorless_minus_embedding": -0.123288,
+          "diff_sd": 0.572072,
+          "bootstrap_ci95": [
+            -0.260274,
+            0.0
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 6,
+            "ties": 54,
+            "embedding_better_or_larger": 13,
+            "direction": "count_only"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 19,
+            "positive": 6,
+            "negative": 13,
+            "ties": 54,
+            "p_two_sided": 0.167068
+          }
+        },
+        "quality_score": {
+          "n": 73,
+          "embedding_mean": 2.972603,
+          "vectorless_mean": 2.976027,
+          "mean_diff_vectorless_minus_embedding": 0.003425,
+          "diff_sd": 0.127497,
+          "bootstrap_ci95": [
+            -0.023973,
+            0.034247
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 7,
+            "ties": 60,
+            "embedding_better_or_larger": 6,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 13,
+            "positive": 7,
+            "negative": 6,
+            "ties": 60,
+            "p_two_sided": 1.0
+          }
+        }
+      },
+      "top_embedding_contexts": [
+        {
+          "id": "gaitex_dataset_motion_capture_provenance",
+          "count": 73
+        },
+        {
+          "id": "gaitex_repeated_task_context",
+          "count": 73
+        },
+        {
+          "id": "gaitex_speed_protocol_context",
+          "count": 36
+        }
+      ],
+      "top_vectorless_nodes": [
+        {
+          "id": "gaitex_dataset_motion_capture_provenance",
+          "count": 73
+        },
+        {
+          "id": "gaitex_repeated_task_context",
+          "count": 73
+        },
+        {
+          "id": "gaitex_speed_protocol_context",
+          "count": 36
+        }
+      ]
+    },
+    "model=qwen3:14b": {
+      "label": "model=qwen3:14b",
+      "n": 73,
+      "datasets": {
+        "GAITEX": 73
+      },
+      "models": {
+        "qwen3:14b": 73
+      },
+      "feature_count": {
+        "mean": 2.986301,
+        "sd": 0.999906,
+        "min": 2.0,
+        "max": 4.0
+      },
+      "metrics": {
+        "feature_coverage": {
+          "n": 73,
+          "embedding_mean": 0.976027,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.023973,
+          "diff_sd": 0.07361,
+          "bootstrap_ci95": [
+            0.010274,
+            0.041096
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 7,
+            "ties": 66,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 7,
+            "positive": 7,
+            "negative": 0,
+            "ties": 66,
+            "p_two_sided": 0.015625
+          }
+        },
+        "faithfulness": {
+          "n": 73,
+          "embedding_mean": 1.0,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.0,
+          "diff_sd": 0.0,
+          "bootstrap_ci95": [
+            0.0,
+            0.0
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 73,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 0,
+            "positive": 0,
+            "negative": 0,
+            "ties": 73,
+            "p_two_sided": 1.0
+          }
+        },
+        "hallucination_rate": {
+          "n": 73,
+          "embedding_mean": 0.0,
+          "vectorless_mean": 0.0,
+          "mean_diff_vectorless_minus_embedding": 0.0,
+          "diff_sd": 0.0,
+          "bootstrap_ci95": [
+            0.0,
+            0.0
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 73,
+            "embedding_better_or_larger": 0,
+            "direction": "lower_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 0,
+            "positive": 0,
+            "negative": 0,
+            "ties": 73,
+            "p_two_sided": 1.0
+          }
+        },
+        "citation_accuracy": {
+          "n": 73,
+          "embedding_mean": 1.0,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.0,
+          "diff_sd": 0.0,
+          "bootstrap_ci95": [
+            0.0,
+            0.0
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 73,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 0,
+            "positive": 0,
+            "negative": 0,
+            "ties": 73,
+            "p_two_sided": 1.0
+          }
+        },
+        "claim_count": {
+          "n": 73,
+          "embedding_mean": 2.424658,
+          "vectorless_mean": 2.493151,
+          "mean_diff_vectorless_minus_embedding": 0.068493,
+          "diff_sd": 0.344378,
+          "bootstrap_ci95": [
+            -0.013699,
+            0.150685
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 7,
+            "ties": 64,
+            "embedding_better_or_larger": 2,
+            "direction": "count_only"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 9,
+            "positive": 7,
+            "negative": 2,
+            "ties": 64,
+            "p_two_sided": 0.179688
+          }
+        },
+        "quality_score": {
+          "n": 73,
+          "embedding_mean": 2.976027,
+          "vectorless_mean": 3.0,
+          "mean_diff_vectorless_minus_embedding": 0.023973,
+          "diff_sd": 0.07361,
+          "bootstrap_ci95": [
+            0.010274,
+            0.041096
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 7,
+            "ties": 66,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 7,
+            "positive": 7,
+            "negative": 0,
+            "ties": 66,
+            "p_two_sided": 0.015625
+          }
+        }
+      },
+      "top_embedding_contexts": [
+        {
+          "id": "gaitex_dataset_motion_capture_provenance",
+          "count": 73
+        },
+        {
+          "id": "gaitex_repeated_task_context",
+          "count": 73
+        },
+        {
+          "id": "gaitex_speed_protocol_context",
+          "count": 36
+        }
+      ],
+      "top_vectorless_nodes": [
+        {
+          "id": "gaitex_dataset_motion_capture_provenance",
+          "count": 73
+        },
+        {
+          "id": "gaitex_repeated_task_context",
+          "count": 73
+        },
+        {
+          "id": "gaitex_speed_protocol_context",
+          "count": 36
+        }
+      ]
+    },
+    "dataset=GAITEX | model=llama3.1:8b": {
+      "label": "dataset=GAITEX | model=llama3.1:8b",
+      "n": 73,
+      "datasets": {
+        "GAITEX": 73
+      },
+      "models": {
+        "llama3.1:8b": 73
+      },
+      "feature_count": {
+        "mean": 2.986301,
+        "sd": 0.999906,
+        "min": 2.0,
+        "max": 4.0
+      },
+      "metrics": {
+        "feature_coverage": {
+          "n": 73,
+          "embedding_mean": 0.982877,
+          "vectorless_mean": 0.976027,
+          "mean_diff_vectorless_minus_embedding": -0.006849,
+          "diff_sd": 0.130677,
+          "bootstrap_ci95": [
+            -0.037671,
+            0.023973
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 3,
+            "ties": 65,
+            "embedding_better_or_larger": 5,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 8,
+            "positive": 3,
+            "negative": 5,
+            "ties": 65,
+            "p_two_sided": 0.726562
+          }
+        },
+        "faithfulness": {
+          "n": 73,
+          "embedding_mean": 0.917811,
+          "vectorless_mean": 0.938132,
+          "mean_diff_vectorless_minus_embedding": 0.020321,
+          "diff_sd": 0.205962,
+          "bootstrap_ci95": [
+            -0.028993,
+            0.069407
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 11,
+            "ties": 53,
+            "embedding_better_or_larger": 9,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 20,
+            "positive": 11,
+            "negative": 9,
+            "ties": 53,
+            "p_two_sided": 0.823803
+          }
+        },
+        "hallucination_rate": {
+          "n": 73,
+          "embedding_mean": 0.082189,
+          "vectorless_mean": 0.061868,
+          "mean_diff_vectorless_minus_embedding": -0.020321,
+          "diff_sd": 0.205962,
+          "bootstrap_ci95": [
+            -0.069634,
+            0.028766
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 11,
+            "ties": 53,
+            "embedding_better_or_larger": 9,
+            "direction": "lower_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 20,
+            "positive": 9,
+            "negative": 11,
+            "ties": 53,
+            "p_two_sided": 0.823803
+          }
+        },
+        "citation_accuracy": {
+          "n": 73,
+          "embedding_mean": 1.0,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.0,
+          "diff_sd": 0.0,
+          "bootstrap_ci95": [
+            0.0,
+            0.0
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 73,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 0,
+            "positive": 0,
+            "negative": 0,
+            "ties": 73,
+            "p_two_sided": 1.0
+          }
+        },
+        "claim_count": {
+          "n": 73,
+          "embedding_mean": 2.712329,
+          "vectorless_mean": 2.835616,
+          "mean_diff_vectorless_minus_embedding": 0.123288,
+          "diff_sd": 0.572072,
+          "bootstrap_ci95": [
+            -0.013699,
+            0.260274
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 17,
+            "ties": 48,
+            "embedding_better_or_larger": 8,
+            "direction": "count_only"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 25,
+            "positive": 17,
+            "negative": 8,
+            "ties": 48,
+            "p_two_sided": 0.107752
+          }
+        },
+        "quality_score": {
+          "n": 73,
+          "embedding_mean": 2.818499,
+          "vectorless_mean": 2.85229,
+          "mean_diff_vectorless_minus_embedding": 0.033792,
+          "diff_sd": 0.473124,
+          "bootstrap_ci95": [
+            -0.0742,
+            0.147715
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 12,
+            "ties": 48,
+            "embedding_better_or_larger": 13,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 25,
+            "positive": 12,
+            "negative": 13,
+            "ties": 48,
+            "p_two_sided": 1.0
+          }
+        }
+      },
+      "top_embedding_contexts": [
+        {
+          "id": "gaitex_dataset_motion_capture_provenance",
+          "count": 73
+        },
+        {
+          "id": "gaitex_repeated_task_context",
+          "count": 73
+        },
+        {
+          "id": "gaitex_speed_protocol_context",
+          "count": 36
+        }
+      ],
+      "top_vectorless_nodes": [
+        {
+          "id": "gaitex_dataset_motion_capture_provenance",
+          "count": 73
+        },
+        {
+          "id": "gaitex_repeated_task_context",
+          "count": 73
+        },
+        {
+          "id": "gaitex_speed_protocol_context",
+          "count": 36
+        }
+      ]
+    },
+    "dataset=GAITEX | model=mistral-small:24b": {
+      "label": "dataset=GAITEX | model=mistral-small:24b",
+      "n": 73,
+      "datasets": {
+        "GAITEX": 73
+      },
+      "models": {
+        "mistral-small:24b": 73
+      },
+      "feature_count": {
+        "mean": 2.986301,
+        "sd": 0.999906,
+        "min": 2.0,
+        "max": 4.0
+      },
+      "metrics": {
+        "feature_coverage": {
+          "n": 73,
+          "embedding_mean": 0.972603,
+          "vectorless_mean": 0.976027,
+          "mean_diff_vectorless_minus_embedding": 0.003425,
+          "diff_sd": 0.127497,
+          "bootstrap_ci95": [
+            -0.023973,
+            0.034247
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 7,
+            "ties": 60,
+            "embedding_better_or_larger": 6,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 13,
+            "positive": 7,
+            "negative": 6,
+            "ties": 60,
+            "p_two_sided": 1.0
+          }
+        },
+        "faithfulness": {
+          "n": 73,
+          "embedding_mean": 1.0,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.0,
+          "diff_sd": 0.0,
+          "bootstrap_ci95": [
+            0.0,
+            0.0
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 73,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 0,
+            "positive": 0,
+            "negative": 0,
+            "ties": 73,
+            "p_two_sided": 1.0
+          }
+        },
+        "hallucination_rate": {
+          "n": 73,
+          "embedding_mean": 0.0,
+          "vectorless_mean": 0.0,
+          "mean_diff_vectorless_minus_embedding": 0.0,
+          "diff_sd": 0.0,
+          "bootstrap_ci95": [
+            0.0,
+            0.0
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 73,
+            "embedding_better_or_larger": 0,
+            "direction": "lower_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 0,
+            "positive": 0,
+            "negative": 0,
+            "ties": 73,
+            "p_two_sided": 1.0
+          }
+        },
+        "citation_accuracy": {
+          "n": 73,
+          "embedding_mean": 1.0,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.0,
+          "diff_sd": 0.0,
+          "bootstrap_ci95": [
+            0.0,
+            0.0
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 73,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 0,
+            "positive": 0,
+            "negative": 0,
+            "ties": 73,
+            "p_two_sided": 1.0
+          }
+        },
+        "claim_count": {
+          "n": 73,
+          "embedding_mean": 2.821918,
+          "vectorless_mean": 2.69863,
+          "mean_diff_vectorless_minus_embedding": -0.123288,
+          "diff_sd": 0.572072,
+          "bootstrap_ci95": [
+            -0.260274,
+            0.0
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 6,
+            "ties": 54,
+            "embedding_better_or_larger": 13,
+            "direction": "count_only"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 19,
+            "positive": 6,
+            "negative": 13,
+            "ties": 54,
+            "p_two_sided": 0.167068
+          }
+        },
+        "quality_score": {
+          "n": 73,
+          "embedding_mean": 2.972603,
+          "vectorless_mean": 2.976027,
+          "mean_diff_vectorless_minus_embedding": 0.003425,
+          "diff_sd": 0.127497,
+          "bootstrap_ci95": [
+            -0.023973,
+            0.034247
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 7,
+            "ties": 60,
+            "embedding_better_or_larger": 6,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 13,
+            "positive": 7,
+            "negative": 6,
+            "ties": 60,
+            "p_two_sided": 1.0
+          }
+        }
+      },
+      "top_embedding_contexts": [
+        {
+          "id": "gaitex_dataset_motion_capture_provenance",
+          "count": 73
+        },
+        {
+          "id": "gaitex_repeated_task_context",
+          "count": 73
+        },
+        {
+          "id": "gaitex_speed_protocol_context",
+          "count": 36
+        }
+      ],
+      "top_vectorless_nodes": [
+        {
+          "id": "gaitex_dataset_motion_capture_provenance",
+          "count": 73
+        },
+        {
+          "id": "gaitex_repeated_task_context",
+          "count": 73
+        },
+        {
+          "id": "gaitex_speed_protocol_context",
+          "count": 36
+        }
+      ]
+    },
+    "dataset=GAITEX | model=qwen3:14b": {
+      "label": "dataset=GAITEX | model=qwen3:14b",
+      "n": 73,
+      "datasets": {
+        "GAITEX": 73
+      },
+      "models": {
+        "qwen3:14b": 73
+      },
+      "feature_count": {
+        "mean": 2.986301,
+        "sd": 0.999906,
+        "min": 2.0,
+        "max": 4.0
+      },
+      "metrics": {
+        "feature_coverage": {
+          "n": 73,
+          "embedding_mean": 0.976027,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.023973,
+          "diff_sd": 0.07361,
+          "bootstrap_ci95": [
+            0.010274,
+            0.041096
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 7,
+            "ties": 66,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 7,
+            "positive": 7,
+            "negative": 0,
+            "ties": 66,
+            "p_two_sided": 0.015625
+          }
+        },
+        "faithfulness": {
+          "n": 73,
+          "embedding_mean": 1.0,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.0,
+          "diff_sd": 0.0,
+          "bootstrap_ci95": [
+            0.0,
+            0.0
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 73,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 0,
+            "positive": 0,
+            "negative": 0,
+            "ties": 73,
+            "p_two_sided": 1.0
+          }
+        },
+        "hallucination_rate": {
+          "n": 73,
+          "embedding_mean": 0.0,
+          "vectorless_mean": 0.0,
+          "mean_diff_vectorless_minus_embedding": 0.0,
+          "diff_sd": 0.0,
+          "bootstrap_ci95": [
+            0.0,
+            0.0
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 73,
+            "embedding_better_or_larger": 0,
+            "direction": "lower_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 0,
+            "positive": 0,
+            "negative": 0,
+            "ties": 73,
+            "p_two_sided": 1.0
+          }
+        },
+        "citation_accuracy": {
+          "n": 73,
+          "embedding_mean": 1.0,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.0,
+          "diff_sd": 0.0,
+          "bootstrap_ci95": [
+            0.0,
+            0.0
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 73,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 0,
+            "positive": 0,
+            "negative": 0,
+            "ties": 73,
+            "p_two_sided": 1.0
+          }
+        },
+        "claim_count": {
+          "n": 73,
+          "embedding_mean": 2.424658,
+          "vectorless_mean": 2.493151,
+          "mean_diff_vectorless_minus_embedding": 0.068493,
+          "diff_sd": 0.344378,
+          "bootstrap_ci95": [
+            -0.013699,
+            0.150685
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 7,
+            "ties": 64,
+            "embedding_better_or_larger": 2,
+            "direction": "count_only"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 9,
+            "positive": 7,
+            "negative": 2,
+            "ties": 64,
+            "p_two_sided": 0.179688
+          }
+        },
+        "quality_score": {
+          "n": 73,
+          "embedding_mean": 2.976027,
+          "vectorless_mean": 3.0,
+          "mean_diff_vectorless_minus_embedding": 0.023973,
+          "diff_sd": 0.07361,
+          "bootstrap_ci95": [
+            0.010274,
+            0.041096
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 7,
+            "ties": 66,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 7,
+            "positive": 7,
+            "negative": 0,
+            "ties": 66,
+            "p_two_sided": 0.015625
+          }
+        }
+      },
+      "top_embedding_contexts": [
+        {
+          "id": "gaitex_dataset_motion_capture_provenance",
+          "count": 73
+        },
+        {
+          "id": "gaitex_repeated_task_context",
+          "count": 73
+        },
+        {
+          "id": "gaitex_speed_protocol_context",
+          "count": 36
+        }
+      ],
+      "top_vectorless_nodes": [
+        {
+          "id": "gaitex_dataset_motion_capture_provenance",
+          "count": 73
+        },
+        {
+          "id": "gaitex_repeated_task_context",
+          "count": 73
+        },
+        {
+          "id": "gaitex_speed_protocol_context",
+          "count": 36
+        }
+      ]
+    }
+  },
+  "notes": [
+    "All comparisons are paired within the same case and LLM.",
+    "Mean difference is vectorless_tree_rag minus embedding_rag.",
+    "For hallucination_rate, negative mean difference favors vectorless_tree_rag because lower is better.",
+    "Sign-test p-values are exact two-sided tests over non-tied paired differences.",
+    "Bootstrap CIs are percentile intervals for the mean paired difference.",
+    "Records with status=no_features are counted but excluded from inferential paired tests."
+  ]
+}

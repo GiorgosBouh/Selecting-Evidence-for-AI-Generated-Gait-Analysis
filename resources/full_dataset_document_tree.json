@@ -1,0 +1,393 @@
+[
+  {
+    "node_id": "perry_2010_root",
+    "title": "Perry & Burnfield: Gait Analysis, Normal and Pathological Function",
+    "summary": "Primary source for clinical interpretation of gait parameters and gait-cycle timing.",
+    "text": "",
+    "source_id": "perry_2010_gait_analysis_normal",
+    "locator": "local PDF: gait_analysis_reviews/Jacquelin_Perry_MD_Gait_Analysis_Normal.pdf",
+    "supports": [],
+    "children": [
+      {
+        "node_id": "perry_step_stride_progression",
+        "title": "Forward progression: step length and stride length",
+        "summary": "Step length and stride length describe forward progression. Reduced values support a short-step or short-stride pattern.",
+        "text": "Perry and Burnfield define step and stride measures as core distance parameters of gait progression. When step length and stride length are reduced, especially across both usual and fast walking conditions, the clinically useful interpretation is shortened forward progression rather than a single isolated measurement finding.",
+        "source_id": "perry_2010_gait_analysis_normal",
+        "locator": "local PDF, distance/time gait parameters; previously indexed pages 30, 36, 37",
+        "supports": [
+          "reduced_step_length_ugs",
+          "reduced_step_length_fgs",
+          "reduced_stride_length_ugs",
+          "reduced_stride_length_fgs"
+        ]
+      },
+      {
+        "node_id": "perry_velocity_cadence_timing",
+        "title": "Distance-time pattern: velocity and cadence",
+        "summary": "Velocity and cadence are distance-time gait descriptors. Reduced velocity indicates slower progression; cadence changes describe altered stepping frequency.",
+        "text": "Perry and Burnfield treat walking speed, cadence, step length, and stride length as linked distance-time descriptors. Reduced velocity summarizes slower forward progression. Cadence describes stepping frequency and should be interpreted together with step and stride length rather than as an isolated abnormality.",
+        "source_id": "perry_2010_gait_analysis_normal",
+        "locator": "local PDF, distance/time gait parameters; previously indexed pages 30, 442",
+        "supports": [
+          "reduced_velocity_ugs",
+          "reduced_velocity_fgs",
+          "increased_cadence_ugs",
+          "increased_cadence_fgs"
+        ]
+      },
+      {
+        "node_id": "perry_support_phase_stability",
+        "title": "Stance timing: single support and double support",
+        "summary": "Single support and double support are stance-phase timing measures. Prolonged double support suggests increased bipedal support time.",
+        "text": "Perry and Burnfield describe double support as the portion of stance where both feet are on the ground. Prolonged double support indicates increased bipedal support time and is commonly interpreted as a cautious or stability-seeking gait strategy. Reduced single support can indicate altered stance loading or reduced confidence during single-limb stance.",
+        "source_id": "perry_2010_gait_analysis_normal",
+        "locator": "local PDF, gait cycle and stance timing; previously indexed pages 45, 68, 71",
+        "supports": [
+          "prolonged_double_support_ugs",
+          "prolonged_double_support_fgs",
+          "reduced_single_support_ugs",
+          "reduced_single_support_fgs"
+        ]
+      },
+      {
+        "node_id": "perry_data2_progression_speed_length",
+        "title": "Data_2 progression: speed, cadence, step length, and stride length",
+        "summary": "Distance-time gait descriptors should be interpreted together; Data_2 speed, step length, and stride length are approximate protocol-distance estimates.",
+        "text": "Perry and Burnfield frame walking speed, cadence, step length, stride length, and stride timing as linked distance-time gait descriptors. For Data_2, reduced approximate speed together with reduced approximate step or stride length supports an interpretation of reduced forward progression. Cadence should be interpreted with step and stride length: low cadence suggests slower stepping frequency, while high cadence with short steps can indicate a short-step timing strategy. Because Data_2 speed, step length, and stride length are protocol-distance estimates, claims must call them approximate.",
+        "source_id": "perry_2010_gait_analysis_normal",
+        "locator": "local PDF, distance-time gait parameters; Data_2 approximations documented by feature extraction",
+        "supports": [
+          "reduced_approximate_walking_speed",
+          "reduced_approximate_step_length",
+          "reduced_approximate_stride_length",
+          "reduced_cadence",
+          "increased_cadence",
+          "prolonged_stride_time"
+        ]
+      },
+      {
+        "node_id": "perry_data2_phase_support_asymmetry",
+        "title": "Data_2 gait-cycle timing: swing, stance, double support, and asymmetry",
+        "summary": "Event-derived swing, stance, stride, double-support, variability, and asymmetry features support temporal gait interpretation.",
+        "text": "Perry and Burnfield describe gait-cycle timing through stance, swing, stride, and double-support intervals. In Data_2, toe-off to heel-strike is treated as swing and heel-strike to the next toe-off as stance. Prolonged stance or increased double-support percentage can support a cautious or stability-seeking interpretation. Left-right asymmetry in stride, swing, or stance timing supports an asymmetric temporal gait pattern. Increased stride-time variability supports a less consistent gait-cycle timing interpretation.",
+        "source_id": "perry_2010_gait_analysis_normal",
+        "locator": "local PDF, gait-cycle and stance/swing timing; Data_2 event definitions",
+        "supports": [
+          "prolonged_stride_time",
+          "increased_stride_time_variability",
+          "increased_stride_time_asymmetry",
+          "prolonged_swing_time",
+          "increased_swing_time_asymmetry",
+          "prolonged_stance_time",
+          "increased_stance_time_asymmetry",
+          "increased_double_support_percentage"
+        ]
+      }
+    ]
+  },
+  {
+    "node_id": "supporting_reviews_root",
+    "title": "Supporting gait-analysis reviews in the same local folder",
+    "summary": "Secondary sources used after Perry for speed effects, wearable sensors, and neurological gait context.",
+    "text": "",
+    "source_id": "local_gait_analysis_reviews",
+    "locator": "gait_analysis_reviews/",
+    "supports": [],
+    "children": [
+      {
+        "node_id": "fukuchi_speed_effects",
+        "title": "Walking speed effects on gait biomechanics",
+        "summary": "Walking speed affects spatiotemporal and biomechanical gait parameters, so UGS and FGS findings should be interpreted as speed-specific measurements before being grouped.",
+        "text": "The Fukuchi walking-speed systematic review states that gait speed affects spatiotemporal gait parameters, kinematics, kinetics, and ground reaction forces. Therefore, usual-speed and fast-speed values should first be read as speed-specific findings, then combined only when the same pattern persists across conditions.",
+        "source_id": "fukuchi_2019_walking_speed_review",
+        "locator": "gait_analysis_reviews/Effects of walking speed on gait biomechanics in healthy participants- a systematic review and meta-analysis.pdf",
+        "supports": [
+          "reduced_step_length_ugs",
+          "reduced_step_length_fgs",
+          "reduced_stride_length_ugs",
+          "reduced_stride_length_fgs",
+          "reduced_velocity_ugs",
+          "reduced_velocity_fgs",
+          "increased_cadence_ugs",
+          "increased_cadence_fgs"
+        ]
+      },
+      {
+        "node_id": "prasanth_wearable_gait_events",
+        "title": "Wearable sensor gait detection",
+        "summary": "Wearable gait-analysis reviews support the use of IMUs and detected gait events for segmentation and gait-cycle interpretation.",
+        "text": "Wearable sensor gait-detection reviews describe IMUs as a common modality for gait event and gait phase detection. This supports using recorded left/right gait events and U-turn boundaries as trial-structure evidence, but it does not by itself create a diagnosis.",
+        "source_id": "prasanth_2021_wearable_gait_detection_review",
+        "locator": "gait_analysis_reviews/pubmed_open_access/04_Prasanth_2021_wearable_sensor_realtime_gait_detection.xml and local wearable review PDFs",
+        "supports": [
+          "wearable_imu_trial",
+          "u_turn_available",
+          "gait_events_available"
+        ]
+      },
+      {
+        "node_id": "neurodegenerative_pd_gait_context",
+        "title": "Neurological and Parkinson gait context",
+        "summary": "Neurological gait reviews provide secondary context for neurological cohorts, Parkinson disease, and motor-impairment scores.",
+        "text": "Neurological gait-analysis reviews discuss Parkinson disease and other neurological cohorts as conditions where gait assessment and motor scales can contextualize impairment. This source is secondary context; the participant actual diagnosis, cohort, visual gait score, and clinical score values still come from the dataset metadata.",
+        "source_id": "cicirelli_2022_neurodegenerative_gait_review",
+        "locator": "gait_analysis_reviews/Human Gait Analysis in Neurodegenerative Diseases- A Review.pdf; gait_analysis_reviews/Gait analysis for Parkinson\u2019s disease using multiscale entropy.pdf",
+        "supports": [
+          "clinical_score_available",
+          "clinical_score_updrs_iii",
+          "neurological_cohort",
+          "pathology_cipn",
+          "pathology_cva",
+          "pathology_pd",
+          "pathology_ril",
+          "visual_gait_impairment"
+        ]
+      },
+      {
+        "node_id": "clinical_gait_analysis_general_context",
+        "title": "General clinical gait-analysis context",
+        "summary": "Clinical gait-analysis reviews provide general context for interpreting cohort labels, visual gait assessment, and clinical scores without replacing dataset metadata.",
+        "text": "Clinical gait-analysis reviews describe gait analysis as a clinical assessment framework across healthy, neurological, and orthopedic populations. This supports using cohort labels, visual gait assessment, and clinical score availability as clinical context, while the exact cohort, pathology, and score values remain dataset metadata.",
+        "source_id": "clinical_gait_analysis_1973_2023_review",
+        "locator": "gait_analysis_reviews/Clinical gait analysis 1973-2023- Evaluating progress to guide the future.pdf; gait_analysis_reviews/Gait Analysis.pdf",
+        "supports": [
+          "healthy_cohort",
+          "neurological_cohort",
+          "orthopedic_cohort",
+          "healthy_subject",
+          "pathology_acl",
+          "pathology_koa",
+          "pathology_hoa",
+          "visual_gait_impairment",
+          "clinical_score_available"
+        ]
+      },
+      {
+        "node_id": "pathology_context_neurological_orthopedic_gait",
+        "title": "Pathology-aware interpretation without diagnosis",
+        "summary": "Local pathological-gait sources support cautious interpretation for CVA, PD, OA, and neuropathy-labeled Data_2 cases.",
+        "text": "The local gait-analysis source set supports cautious pathology-aware interpretation without making a new diagnosis. In CVA/stroke-labeled cases, reduced speed, shorter steps, and left-right temporal asymmetry are consistent with asymmetric or hemiparetic gait interpretation. In Parkinson disease-labeled cases, short step or stride length with cadence changes can support a short-step Parkinsonian pattern when grounded in the case values. In hip or knee osteoarthritis-labeled cases, slower speed and increased double support can support cautious or load-avoidance interpretation. In neuropathy-labeled cases, variability, asymmetry, and increased support time should be framed as possible stability-control findings rather than proof of sensory loss.",
+        "source_id": "pathological_gait_local_review_set",
+        "locator": "PATHOLOGICAL_GAIT_SOURCE_COVERAGE_2026-06-14.md plus local PDFs",
+        "supports": [
+          "reduced_approximate_walking_speed",
+          "reduced_approximate_step_length",
+          "reduced_approximate_stride_length",
+          "reduced_cadence",
+          "increased_cadence",
+          "increased_stride_time_variability",
+          "increased_stride_time_asymmetry",
+          "increased_swing_time_asymmetry",
+          "increased_stance_time_asymmetry",
+          "increased_double_support_percentage"
+        ]
+      },
+      {
+        "node_id": "turning_performance_data2_context",
+        "title": "Turning performance in the Data_2 out-and-back protocol",
+        "summary": "U-turn duration is a turning-performance feature and should be interpreted with straight walking features.",
+        "text": "Data_2 marks U-turn boundaries during the out-and-back walking protocol. A prolonged U-turn duration is a turning-performance finding and should be interpreted together with straight-walking speed, cadence, asymmetry, and support timing. It can suggest slower or less efficient turning, but it should not be converted into a diagnosis or fall-risk claim without additional validated evidence.",
+        "source_id": "clinical_gait_analysis_reviews_and_data2_protocol",
+        "locator": "Clinical Gait Signals dataset paper and clinical gait-analysis review sources",
+        "supports": [
+          "prolonged_uturn_duration"
+        ]
+      }
+    ]
+  },
+  {
+    "node_id": "dataset_papers_root",
+    "title": "Dataset papers: schema, protocol, and metadata only",
+    "summary": "Dataset papers are secondary to Perry for interpretation. They define files, fields, cohorts, sensors, and trial protocols.",
+    "text": "",
+    "source_id": "dataset_papers",
+    "locator": "Data_1 and Data_2 local PDFs",
+    "supports": [],
+    "children": [
+      {
+        "node_id": "health_gait_csv_parameter_mapping",
+        "title": "Health&Gait CSV parameter mapping",
+        "summary": "Health&Gait defines the available CSV columns for UGS/FGS step, stride, cadence, velocity, single support, and bipedal support.",
+        "text": "The Health&Gait paper documents gait_parameters.csv and the UGS/FGS fields used in the case evidence. This node is used to verify that the measurements exist in the dataset; interpretation of abnormal gait patterns should prefer Perry and supporting gait-analysis reviews.",
+        "source_id": "health_gait_2025",
+        "locator": "Health & Gait paper, Data Records; Table 4",
+        "supports": [
+          "reduced_step_length_ugs",
+          "reduced_step_length_fgs",
+          "reduced_stride_length_ugs",
+          "reduced_stride_length_fgs",
+          "increased_cadence_ugs",
+          "increased_cadence_fgs",
+          "reduced_velocity_ugs",
+          "reduced_velocity_fgs",
+          "reduced_single_support_ugs",
+          "reduced_single_support_fgs",
+          "prolonged_double_support_ugs",
+          "prolonged_double_support_fgs"
+        ]
+      },
+      {
+        "node_id": "clinical_dataset_protocol_metadata",
+        "title": "Clinical Gait Signals protocol and metadata",
+        "summary": "The clinical wearable-sensor dataset defines the IMU setup, 10-meter out-and-back protocol, U-turn metadata, gait events, cohorts, pathology, and clinical scores.",
+        "text": "The Clinical Gait Signals paper defines the dataset protocol and metadata: four IMUs, standing, walking 10 meters, turning, walking back 10 meters, U-turn boundaries, detected gait events, healthy/neurological/orthopedic cohort labels, pathology labels, visual gait assessment, and pathology-specific clinical scores such as UPDRS III, FMA-LE, TNSc, mSS, WOMAC, and IKDC. For Data_2, the only dataset pathology labels in scope are HS, PD, CVA, CIPN, RIL, ACL, KOA, and HOA. Diseases only mentioned in other PDFs are out of scope for Data_2 diagnostic claims unless they appear in the participant metadata. This node verifies data provenance rather than providing the main gait-interpretation theory.",
+        "source_id": "clinical_gait_signals_2025",
+        "locator": "Clinical Gait Signals paper, Methods; Data Records; Participants and pathologies; Tables 1-2",
+        "supports": [
+          "clinical_score_available",
+          "clinical_score_updrs_iii",
+          "gait_events_available",
+          "healthy_cohort",
+          "healthy_subject",
+          "neurological_cohort",
+          "orthopedic_cohort",
+          "pathology_acl",
+          "pathology_cipn",
+          "pathology_cva",
+          "pathology_hoa",
+          "pathology_koa",
+          "pathology_pd",
+          "pathology_ril",
+          "u_turn_available",
+          "visual_gait_impairment",
+          "wearable_imu_trial"
+        ]
+      },
+      {
+        "node_id": "clinical_dataset_biomechanical_feature_provenance",
+        "title": "Data_2 biomechanical feature provenance and limits",
+        "summary": "Data_2 event metadata supports temporal features directly and protocol-distance speed/step/stride features approximately.",
+        "text": "The Clinical Gait Signals dataset provides wearable IMU trials with detected toe-off and heel-strike events, U-turn boundaries, sampling frequency, cohort labels, pathology labels, visual gait assessment, and pathology-specific clinical scores. Event-derived temporal features such as cadence, stride time, swing time, stance time, temporal asymmetry, double-support overlap, and U-turn duration are traceable to the metadata/events. Approximate straight walking speed, step length, and stride length are derived from the protocol distance and event counts, so they must not be presented as true foot-trajectory measurements.",
+        "source_id": "clinical_gait_signals_2025",
+        "locator": "Clinical Gait Signals paper and bundled plot_data.py event definitions",
+        "supports": [
+          "reduced_approximate_walking_speed",
+          "reduced_approximate_step_length",
+          "reduced_approximate_stride_length",
+          "reduced_cadence",
+          "increased_cadence",
+          "prolonged_stride_time",
+          "increased_stride_time_variability",
+          "increased_stride_time_asymmetry",
+          "prolonged_swing_time",
+          "increased_swing_time_asymmetry",
+          "prolonged_stance_time",
+          "increased_stance_time_asymmetry",
+          "increased_double_support_percentage",
+          "prolonged_uturn_duration"
+        ]
+      },
+      {
+        "node_id": "gaitex_dataset_motion_capture_provenance",
+        "title": "GAITEX motion-capture and IMU provenance",
+        "summary": "GAITEX folders provide metadata, timestamps, Qualisys marker data, Xsens IMU data, and OpenSim inverse-kinematics outputs.",
+        "text": "The GAITEX bundle stores each participant-condition case with metadata JSON, timestamp segment CSV, Qualisys marker CSV, Xsens IMU CSV, segment-registered IMU data, and OpenSim inverse-kinematics outputs. This node verifies that the case is grounded in synchronized motion-capture and IMU assets. It should be used for provenance and measurement-context claims, not diagnostic claims.",
+        "source_id": "gaitex_dataset_bundle",
+        "locator": "Data_3_GAITEX/data.zip participant-condition folders",
+        "supports": [
+          "gaitex_motion_capture_trial"
+        ]
+      },
+      {
+        "node_id": "gaitex_speed_protocol_context",
+        "title": "GAITEX speed-segment protocol",
+        "summary": "GAITEX timestamp CSV files can provide labeled walking segments and velocities in km/h.",
+        "text": "GAITEX timestamp files can include labeled walking segments with velocities in kilometers per hour. These values support protocol-level interpretation of speed segments, including the mean, minimum, maximum, and range of instructed or recorded segment velocities. Without additional derived gait parameters, claims should stay at the level of measured speed protocol and segment structure.",
+        "source_id": "gaitex_timestamp_segments",
+        "locator": "Data_3_GAITEX/data.zip timestamps_*.csv files",
+        "supports": [
+          "gaitex_speed_protocol",
+          "gaitex_multi_speed_progression"
+        ]
+      },
+      {
+        "node_id": "gaitex_repeated_task_context",
+        "title": "GAITEX repeated temporal task segments",
+        "summary": "GAITEX timestamp CSV files define repeated labeled task segments for each participant-condition case.",
+        "text": "GAITEX timestamp files define repeated labeled temporal segments. Segment counts, label counts, and mean segment duration support claims about repeated task evidence and the structure of the captured walking or movement condition. These labels should not be converted into disease or impairment claims unless the case evidence supplies a clinical label.",
+        "source_id": "gaitex_timestamp_segments",
+        "locator": "Data_3_GAITEX/data.zip timestamps_*.csv files",
+        "supports": [
+          "gaitex_repeated_task_segments"
+        ]
+      }
+    ]
+  },
+  {
+    "node_id": "amputee_biomechanics_root",
+    "title": "Above-knee amputee prosthetic gait biomechanics",
+    "summary": "Dataset-specific branch for prosthetic-vs-sound limb kinematics, kinetics, speed conditions, and clinical metadata provenance.",
+    "text": "",
+    "source_id": "hood_lenzi_above_knee_amputee_figshare_2020",
+    "locator": "Figshare DOI 10.6084/m9.figshare.10308443; processed MATLAB workspaces and subject metadata",
+    "supports": [],
+    "children": [
+      {
+        "node_id": "amputee_dataset_processed_matlab_provenance",
+        "title": "Provenance: processed prosthetic and sound-side MATLAB data",
+        "summary": "Processed .mat files contain ankle, knee, and hip kinematics/kinetics for ipsilateral prosthesis-side and contralateral sound-side limbs.",
+        "text": "The above-knee amputee dataset README describes processed MATLAB workspaces with ankle, knee, and hip kinetic and kinematic data for both ipsilateral prosthesis-side and contralateral sound-side limbs. Subject metadata includes amputation side and K-level. Interpretations must preserve side provenance and speed condition.",
+        "source_id": "hood_lenzi_above_knee_amputee_figshare_2020",
+        "locator": "README and TF*_DATA.mat structures",
+        "supports": []
+      },
+      {
+        "node_id": "amputee_ankle_propulsion_push_off",
+        "title": "Propulsion: prosthetic ankle push-off moment",
+        "summary": "Reduced prosthetic-side ankle plantarflexion moment relative to the sound side supports reduced push-off/propulsion.",
+        "text": "Ankle plantarflexion moment in late stance is propulsion-related. In a unilateral above-knee amputee case, a lower ipsilateral prosthetic-side ankle plantarflexion moment peak than the contralateral sound side supports a reduced prosthetic push-off interpretation when the side-specific values and speed are retained.",
+        "source_id": "perry_2010_gait_analysis_normal_and_amputee_dataset",
+        "locator": "Perry/Burnfield propulsion concepts; Hood & Lenzi ankle moment fields",
+        "supports": [
+          "prosthetic_ankle_reduced_push_off_moment"
+        ]
+      },
+      {
+        "node_id": "amputee_ankle_sagittal_rom_asymmetry",
+        "title": "Sagittal ankle pattern: prosthetic ankle ROM asymmetry",
+        "summary": "Ipsilateral-vs-contralateral ankle ROM differences support prosthetic ankle motion asymmetry.",
+        "text": "Sagittal-plane ankle range of motion is a kinematic gait-cycle descriptor. A large prosthetic-side versus sound-side ankle ROM difference supports an ankle motion asymmetry interpretation rather than a broad diagnostic claim.",
+        "source_id": "perry_2010_gait_analysis_normal_and_amputee_dataset",
+        "locator": "Perry/Burnfield sagittal-plane motion; Hood & Lenzi ankle position fields",
+        "supports": [
+          "prosthetic_ankle_rom_asymmetry"
+        ]
+      },
+      {
+        "node_id": "amputee_knee_sagittal_pattern",
+        "title": "Sagittal knee pattern: prosthetic knee ROM",
+        "summary": "Reduced prosthetic-side knee ROM supports altered sagittal-plane knee pattern.",
+        "text": "Knee sagittal-plane range of motion contributes to limb advancement and gait-cycle mechanics. In transfemoral prosthetic gait, reduced prosthetic-side knee ROM relative to the sound side supports an altered sagittal-plane knee pattern while avoiding unsupported treatment or pain inferences.",
+        "source_id": "perry_2010_gait_analysis_normal_and_amputee_dataset",
+        "locator": "Perry/Burnfield knee motion; Hood & Lenzi knee position fields",
+        "supports": [
+          "prosthetic_knee_reduced_rom"
+        ]
+      },
+      {
+        "node_id": "amputee_hip_compensation_pattern",
+        "title": "Proximal compensation: prosthetic-side hip ROM",
+        "summary": "Higher prosthetic-side hip ROM can support a proximal compensation interpretation.",
+        "text": "Hip sagittal-plane motion can reflect proximal compensation in prosthetic gait. Higher prosthetic-side hip ROM relative to the contralateral sound side supports a hip compensation interpretation when tied to the measured ROM ratio and speed condition.",
+        "source_id": "perry_2010_gait_analysis_normal_and_amputee_dataset",
+        "locator": "Perry/Burnfield hip motion; Hood & Lenzi hip position fields",
+        "supports": [
+          "prosthetic_hip_compensation_rom"
+        ]
+      },
+      {
+        "node_id": "amputee_joint_moment_asymmetry",
+        "title": "Kinetics: prosthetic-side knee and hip moment asymmetry",
+        "summary": "Knee or hip moment peak differences support side-specific kinetic asymmetry.",
+        "text": "Joint moment peaks summarize kinetic loading and control. Prosthetic-side versus sound-side knee or hip moment differences support a side-specific kinetic asymmetry interpretation, with the joint, ratio, and ipsilateral/contralateral values preserved.",
+        "source_id": "perry_2010_gait_analysis_normal_and_amputee_dataset",
+        "locator": "Perry/Burnfield joint kinetics; Hood & Lenzi knee/hip moment fields",
+        "supports": [
+          "prosthetic_knee_moment_asymmetry",
+          "prosthetic_hip_moment_asymmetry"
+        ]
+      }
+    ]
+  }
+]

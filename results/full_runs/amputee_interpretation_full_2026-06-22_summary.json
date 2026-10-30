@@ -1,0 +1,1678 @@
+{
+  "input_record_count": 267,
+  "analyzable_record_count": 264,
+  "status_counts": {
+    "ok": 264,
+    "no_features": 3
+  },
+  "dataset_record_counts": {
+    "Above-Knee Amputee Gait": 267
+  },
+  "model_record_counts": {
+    "mistral-small:24b": 89,
+    "qwen3:14b": 89,
+    "llama3.1:8b": 89
+  },
+  "groups": {
+    "overall": {
+      "label": "overall",
+      "n": 264,
+      "datasets": {
+        "Above-Knee Amputee Gait": 264
+      },
+      "models": {
+        "mistral-small:24b": 88,
+        "qwen3:14b": 88,
+        "llama3.1:8b": 88
+      },
+      "feature_count": {
+        "mean": 2.931818,
+        "sd": 0.938997,
+        "min": 1.0,
+        "max": 6.0
+      },
+      "metrics": {
+        "feature_coverage": {
+          "n": 264,
+          "embedding_mean": 0.974873,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.025127,
+          "diff_sd": 0.121353,
+          "bootstrap_ci95": [
+            0.011868,
+            0.041162
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 18,
+            "ties": 246,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 18,
+            "positive": 18,
+            "negative": 0,
+            "ties": 246,
+            "p_two_sided": 8e-06
+          }
+        },
+        "faithfulness": {
+          "n": 264,
+          "embedding_mean": 0.978788,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.021212,
+          "diff_sd": 0.123963,
+          "bootstrap_ci95": [
+            0.007828,
+            0.038005
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 11,
+            "ties": 253,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 11,
+            "positive": 11,
+            "negative": 0,
+            "ties": 253,
+            "p_two_sided": 0.000977
+          }
+        },
+        "hallucination_rate": {
+          "n": 264,
+          "embedding_mean": 0.021212,
+          "vectorless_mean": 0.0,
+          "mean_diff_vectorless_minus_embedding": -0.021212,
+          "diff_sd": 0.123963,
+          "bootstrap_ci95": [
+            -0.038006,
+            -0.007829
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 11,
+            "ties": 253,
+            "embedding_better_or_larger": 0,
+            "direction": "lower_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 11,
+            "positive": 0,
+            "negative": 11,
+            "ties": 253,
+            "p_two_sided": 0.000977
+          }
+        },
+        "citation_accuracy": {
+          "n": 264,
+          "embedding_mean": 0.988636,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.011364,
+          "diff_sd": 0.105993,
+          "bootstrap_ci95": [
+            0.0,
+            0.026515
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 3,
+            "ties": 261,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 3,
+            "positive": 3,
+            "negative": 0,
+            "ties": 261,
+            "p_two_sided": 0.25
+          }
+        },
+        "claim_count": {
+          "n": 264,
+          "embedding_mean": 2.840909,
+          "vectorless_mean": 2.909091,
+          "mean_diff_vectorless_minus_embedding": 0.068182,
+          "diff_sd": 0.392991,
+          "bootstrap_ci95": [
+            0.022727,
+            0.117424
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 18,
+            "ties": 241,
+            "embedding_better_or_larger": 5,
+            "direction": "count_only"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 23,
+            "positive": 18,
+            "negative": 5,
+            "ties": 241,
+            "p_two_sided": 0.010622
+          }
+        },
+        "quality_score": {
+          "n": 264,
+          "embedding_mean": 2.921085,
+          "vectorless_mean": 3.0,
+          "mean_diff_vectorless_minus_embedding": 0.078915,
+          "diff_sd": 0.460263,
+          "bootstrap_ci95": [
+            0.029293,
+            0.14129
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 18,
+            "ties": 246,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 18,
+            "positive": 18,
+            "negative": 0,
+            "ties": 246,
+            "p_two_sided": 8e-06
+          }
+        }
+      },
+      "top_embedding_contexts": [
+        {
+          "id": "amputee_ankle_sagittal_rom_asymmetry",
+          "count": 225
+        },
+        {
+          "id": "amputee_joint_moment_asymmetry",
+          "count": 219
+        },
+        {
+          "id": "amputee_hip_compensation_pattern",
+          "count": 99
+        },
+        {
+          "id": "amputee_knee_sagittal_pattern",
+          "count": 78
+        },
+        {
+          "id": "amputee_ankle_propulsion_push_off",
+          "count": 54
+        }
+      ],
+      "top_vectorless_nodes": [
+        {
+          "id": "amputee_joint_moment_asymmetry",
+          "count": 228
+        },
+        {
+          "id": "amputee_ankle_sagittal_rom_asymmetry",
+          "count": 225
+        },
+        {
+          "id": "amputee_hip_compensation_pattern",
+          "count": 102
+        },
+        {
+          "id": "amputee_knee_sagittal_pattern",
+          "count": 78
+        },
+        {
+          "id": "amputee_ankle_propulsion_push_off",
+          "count": 54
+        }
+      ]
+    },
+    "dataset=Above-Knee Amputee Gait": {
+      "label": "dataset=Above-Knee Amputee Gait",
+      "n": 264,
+      "datasets": {
+        "Above-Knee Amputee Gait": 264
+      },
+      "models": {
+        "mistral-small:24b": 88,
+        "qwen3:14b": 88,
+        "llama3.1:8b": 88
+      },
+      "feature_count": {
+        "mean": 2.931818,
+        "sd": 0.938997,
+        "min": 1.0,
+        "max": 6.0
+      },
+      "metrics": {
+        "feature_coverage": {
+          "n": 264,
+          "embedding_mean": 0.974873,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.025127,
+          "diff_sd": 0.121353,
+          "bootstrap_ci95": [
+            0.011868,
+            0.041162
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 18,
+            "ties": 246,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 18,
+            "positive": 18,
+            "negative": 0,
+            "ties": 246,
+            "p_two_sided": 8e-06
+          }
+        },
+        "faithfulness": {
+          "n": 264,
+          "embedding_mean": 0.978788,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.021212,
+          "diff_sd": 0.123963,
+          "bootstrap_ci95": [
+            0.007828,
+            0.038005
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 11,
+            "ties": 253,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 11,
+            "positive": 11,
+            "negative": 0,
+            "ties": 253,
+            "p_two_sided": 0.000977
+          }
+        },
+        "hallucination_rate": {
+          "n": 264,
+          "embedding_mean": 0.021212,
+          "vectorless_mean": 0.0,
+          "mean_diff_vectorless_minus_embedding": -0.021212,
+          "diff_sd": 0.123963,
+          "bootstrap_ci95": [
+            -0.038006,
+            -0.007829
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 11,
+            "ties": 253,
+            "embedding_better_or_larger": 0,
+            "direction": "lower_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 11,
+            "positive": 0,
+            "negative": 11,
+            "ties": 253,
+            "p_two_sided": 0.000977
+          }
+        },
+        "citation_accuracy": {
+          "n": 264,
+          "embedding_mean": 0.988636,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.011364,
+          "diff_sd": 0.105993,
+          "bootstrap_ci95": [
+            0.0,
+            0.026515
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 3,
+            "ties": 261,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 3,
+            "positive": 3,
+            "negative": 0,
+            "ties": 261,
+            "p_two_sided": 0.25
+          }
+        },
+        "claim_count": {
+          "n": 264,
+          "embedding_mean": 2.840909,
+          "vectorless_mean": 2.909091,
+          "mean_diff_vectorless_minus_embedding": 0.068182,
+          "diff_sd": 0.392991,
+          "bootstrap_ci95": [
+            0.022727,
+            0.117424
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 18,
+            "ties": 241,
+            "embedding_better_or_larger": 5,
+            "direction": "count_only"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 23,
+            "positive": 18,
+            "negative": 5,
+            "ties": 241,
+            "p_two_sided": 0.010622
+          }
+        },
+        "quality_score": {
+          "n": 264,
+          "embedding_mean": 2.921085,
+          "vectorless_mean": 3.0,
+          "mean_diff_vectorless_minus_embedding": 0.078915,
+          "diff_sd": 0.460263,
+          "bootstrap_ci95": [
+            0.029293,
+            0.14129
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 18,
+            "ties": 246,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 18,
+            "positive": 18,
+            "negative": 0,
+            "ties": 246,
+            "p_two_sided": 8e-06
+          }
+        }
+      },
+      "top_embedding_contexts": [
+        {
+          "id": "amputee_ankle_sagittal_rom_asymmetry",
+          "count": 225
+        },
+        {
+          "id": "amputee_joint_moment_asymmetry",
+          "count": 219
+        },
+        {
+          "id": "amputee_hip_compensation_pattern",
+          "count": 99
+        },
+        {
+          "id": "amputee_knee_sagittal_pattern",
+          "count": 78
+        },
+        {
+          "id": "amputee_ankle_propulsion_push_off",
+          "count": 54
+        }
+      ],
+      "top_vectorless_nodes": [
+        {
+          "id": "amputee_joint_moment_asymmetry",
+          "count": 228
+        },
+        {
+          "id": "amputee_ankle_sagittal_rom_asymmetry",
+          "count": 225
+        },
+        {
+          "id": "amputee_hip_compensation_pattern",
+          "count": 102
+        },
+        {
+          "id": "amputee_knee_sagittal_pattern",
+          "count": 78
+        },
+        {
+          "id": "amputee_ankle_propulsion_push_off",
+          "count": 54
+        }
+      ]
+    },
+    "model=llama3.1:8b": {
+      "label": "model=llama3.1:8b",
+      "n": 88,
+      "datasets": {
+        "Above-Knee Amputee Gait": 88
+      },
+      "models": {
+        "llama3.1:8b": 88
+      },
+      "feature_count": {
+        "mean": 2.931818,
+        "sd": 0.938997,
+        "min": 1.0,
+        "max": 6.0
+      },
+      "metrics": {
+        "feature_coverage": {
+          "n": 88,
+          "embedding_mean": 0.942045,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.057955,
+          "diff_sd": 0.198383,
+          "bootstrap_ci95": [
+            0.021212,
+            0.103409
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 10,
+            "ties": 78,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 10,
+            "positive": 10,
+            "negative": 0,
+            "ties": 78,
+            "p_two_sided": 0.001953
+          }
+        },
+        "faithfulness": {
+          "n": 88,
+          "embedding_mean": 0.945075,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.054925,
+          "diff_sd": 0.206771,
+          "bootstrap_ci95": [
+            0.017045,
+            0.104167
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 7,
+            "ties": 81,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 7,
+            "positive": 7,
+            "negative": 0,
+            "ties": 81,
+            "p_two_sided": 0.015625
+          }
+        },
+        "hallucination_rate": {
+          "n": 88,
+          "embedding_mean": 0.054925,
+          "vectorless_mean": 0.0,
+          "mean_diff_vectorless_minus_embedding": -0.054925,
+          "diff_sd": 0.206771,
+          "bootstrap_ci95": [
+            -0.104167,
+            -0.017047
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 7,
+            "ties": 81,
+            "embedding_better_or_larger": 0,
+            "direction": "lower_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 7,
+            "positive": 0,
+            "negative": 7,
+            "ties": 81,
+            "p_two_sided": 0.015625
+          }
+        },
+        "citation_accuracy": {
+          "n": 88,
+          "embedding_mean": 0.965909,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.034091,
+          "diff_sd": 0.181463,
+          "bootstrap_ci95": [
+            0.0,
+            0.079545
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 3,
+            "ties": 85,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 3,
+            "positive": 3,
+            "negative": 0,
+            "ties": 85,
+            "p_two_sided": 0.25
+          }
+        },
+        "claim_count": {
+          "n": 88,
+          "embedding_mean": 2.761364,
+          "vectorless_mean": 2.909091,
+          "mean_diff_vectorless_minus_embedding": 0.147727,
+          "diff_sd": 0.574847,
+          "bootstrap_ci95": [
+            0.045455,
+            0.272727
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 10,
+            "ties": 76,
+            "embedding_better_or_larger": 2,
+            "direction": "count_only"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 12,
+            "positive": 10,
+            "negative": 2,
+            "ties": 76,
+            "p_two_sided": 0.038574
+          }
+        },
+        "quality_score": {
+          "n": 88,
+          "embedding_mean": 2.798105,
+          "vectorless_mean": 3.0,
+          "mean_diff_vectorless_minus_embedding": 0.201895,
+          "diff_sd": 0.772434,
+          "bootstrap_ci95": [
+            0.062881,
+            0.383714
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 10,
+            "ties": 78,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 10,
+            "positive": 10,
+            "negative": 0,
+            "ties": 78,
+            "p_two_sided": 0.001953
+          }
+        }
+      },
+      "top_embedding_contexts": [
+        {
+          "id": "amputee_ankle_sagittal_rom_asymmetry",
+          "count": 75
+        },
+        {
+          "id": "amputee_joint_moment_asymmetry",
+          "count": 73
+        },
+        {
+          "id": "amputee_hip_compensation_pattern",
+          "count": 33
+        },
+        {
+          "id": "amputee_knee_sagittal_pattern",
+          "count": 26
+        },
+        {
+          "id": "amputee_ankle_propulsion_push_off",
+          "count": 18
+        }
+      ],
+      "top_vectorless_nodes": [
+        {
+          "id": "amputee_joint_moment_asymmetry",
+          "count": 76
+        },
+        {
+          "id": "amputee_ankle_sagittal_rom_asymmetry",
+          "count": 75
+        },
+        {
+          "id": "amputee_hip_compensation_pattern",
+          "count": 34
+        },
+        {
+          "id": "amputee_knee_sagittal_pattern",
+          "count": 26
+        },
+        {
+          "id": "amputee_ankle_propulsion_push_off",
+          "count": 18
+        }
+      ]
+    },
+    "model=mistral-small:24b": {
+      "label": "model=mistral-small:24b",
+      "n": 88,
+      "datasets": {
+        "Above-Knee Amputee Gait": 88
+      },
+      "models": {
+        "mistral-small:24b": 88
+      },
+      "feature_count": {
+        "mean": 2.931818,
+        "sd": 0.938997,
+        "min": 1.0,
+        "max": 6.0
+      },
+      "metrics": {
+        "feature_coverage": {
+          "n": 88,
+          "embedding_mean": 0.991287,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.008712,
+          "diff_sd": 0.040044,
+          "bootstrap_ci95": [
+            0.001894,
+            0.017803
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 4,
+            "ties": 84,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 4,
+            "positive": 4,
+            "negative": 0,
+            "ties": 84,
+            "p_two_sided": 0.125
+          }
+        },
+        "faithfulness": {
+          "n": 88,
+          "embedding_mean": 1.0,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.0,
+          "diff_sd": 0.0,
+          "bootstrap_ci95": [
+            0.0,
+            0.0
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 88,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 0,
+            "positive": 0,
+            "negative": 0,
+            "ties": 88,
+            "p_two_sided": 1.0
+          }
+        },
+        "hallucination_rate": {
+          "n": 88,
+          "embedding_mean": 0.0,
+          "vectorless_mean": 0.0,
+          "mean_diff_vectorless_minus_embedding": 0.0,
+          "diff_sd": 0.0,
+          "bootstrap_ci95": [
+            0.0,
+            0.0
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 88,
+            "embedding_better_or_larger": 0,
+            "direction": "lower_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 0,
+            "positive": 0,
+            "negative": 0,
+            "ties": 88,
+            "p_two_sided": 1.0
+          }
+        },
+        "citation_accuracy": {
+          "n": 88,
+          "embedding_mean": 1.0,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.0,
+          "diff_sd": 0.0,
+          "bootstrap_ci95": [
+            0.0,
+            0.0
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 88,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 0,
+            "positive": 0,
+            "negative": 0,
+            "ties": 88,
+            "p_two_sided": 1.0
+          }
+        },
+        "claim_count": {
+          "n": 88,
+          "embedding_mean": 2.875,
+          "vectorless_mean": 2.886364,
+          "mean_diff_vectorless_minus_embedding": 0.011364,
+          "diff_sd": 0.281809,
+          "bootstrap_ci95": [
+            -0.045455,
+            0.068182
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 4,
+            "ties": 81,
+            "embedding_better_or_larger": 3,
+            "direction": "count_only"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 7,
+            "positive": 4,
+            "negative": 3,
+            "ties": 81,
+            "p_two_sided": 1.0
+          }
+        },
+        "quality_score": {
+          "n": 88,
+          "embedding_mean": 2.991287,
+          "vectorless_mean": 3.0,
+          "mean_diff_vectorless_minus_embedding": 0.008713,
+          "diff_sd": 0.040044,
+          "bootstrap_ci95": [
+            0.001894,
+            0.017803
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 4,
+            "ties": 84,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 4,
+            "positive": 4,
+            "negative": 0,
+            "ties": 84,
+            "p_two_sided": 0.125
+          }
+        }
+      },
+      "top_embedding_contexts": [
+        {
+          "id": "amputee_ankle_sagittal_rom_asymmetry",
+          "count": 75
+        },
+        {
+          "id": "amputee_joint_moment_asymmetry",
+          "count": 73
+        },
+        {
+          "id": "amputee_hip_compensation_pattern",
+          "count": 33
+        },
+        {
+          "id": "amputee_knee_sagittal_pattern",
+          "count": 26
+        },
+        {
+          "id": "amputee_ankle_propulsion_push_off",
+          "count": 18
+        }
+      ],
+      "top_vectorless_nodes": [
+        {
+          "id": "amputee_joint_moment_asymmetry",
+          "count": 76
+        },
+        {
+          "id": "amputee_ankle_sagittal_rom_asymmetry",
+          "count": 75
+        },
+        {
+          "id": "amputee_hip_compensation_pattern",
+          "count": 34
+        },
+        {
+          "id": "amputee_knee_sagittal_pattern",
+          "count": 26
+        },
+        {
+          "id": "amputee_ankle_propulsion_push_off",
+          "count": 18
+        }
+      ]
+    },
+    "model=qwen3:14b": {
+      "label": "model=qwen3:14b",
+      "n": 88,
+      "datasets": {
+        "Above-Knee Amputee Gait": 88
+      },
+      "models": {
+        "qwen3:14b": 88
+      },
+      "feature_count": {
+        "mean": 2.931818,
+        "sd": 0.938997,
+        "min": 1.0,
+        "max": 6.0
+      },
+      "metrics": {
+        "feature_coverage": {
+          "n": 88,
+          "embedding_mean": 0.991287,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.008712,
+          "diff_sd": 0.040044,
+          "bootstrap_ci95": [
+            0.001894,
+            0.017803
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 4,
+            "ties": 84,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 4,
+            "positive": 4,
+            "negative": 0,
+            "ties": 84,
+            "p_two_sided": 0.125
+          }
+        },
+        "faithfulness": {
+          "n": 88,
+          "embedding_mean": 0.991287,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.008712,
+          "diff_sd": 0.040044,
+          "bootstrap_ci95": [
+            0.001894,
+            0.017803
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 4,
+            "ties": 84,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 4,
+            "positive": 4,
+            "negative": 0,
+            "ties": 84,
+            "p_two_sided": 0.125
+          }
+        },
+        "hallucination_rate": {
+          "n": 88,
+          "embedding_mean": 0.008712,
+          "vectorless_mean": 0.0,
+          "mean_diff_vectorless_minus_embedding": -0.008712,
+          "diff_sd": 0.040044,
+          "bootstrap_ci95": [
+            -0.017803,
+            -0.001894
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 4,
+            "ties": 84,
+            "embedding_better_or_larger": 0,
+            "direction": "lower_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 4,
+            "positive": 0,
+            "negative": 4,
+            "ties": 84,
+            "p_two_sided": 0.125
+          }
+        },
+        "citation_accuracy": {
+          "n": 88,
+          "embedding_mean": 1.0,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.0,
+          "diff_sd": 0.0,
+          "bootstrap_ci95": [
+            0.0,
+            0.0
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 88,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 0,
+            "positive": 0,
+            "negative": 0,
+            "ties": 88,
+            "p_two_sided": 1.0
+          }
+        },
+        "claim_count": {
+          "n": 88,
+          "embedding_mean": 2.886364,
+          "vectorless_mean": 2.931818,
+          "mean_diff_vectorless_minus_embedding": 0.045455,
+          "diff_sd": 0.208299,
+          "bootstrap_ci95": [
+            0.011364,
+            0.090909
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 4,
+            "ties": 84,
+            "embedding_better_or_larger": 0,
+            "direction": "count_only"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 4,
+            "positive": 4,
+            "negative": 0,
+            "ties": 84,
+            "p_two_sided": 0.125
+          }
+        },
+        "quality_score": {
+          "n": 88,
+          "embedding_mean": 2.973863,
+          "vectorless_mean": 3.0,
+          "mean_diff_vectorless_minus_embedding": 0.026138,
+          "diff_sd": 0.120132,
+          "bootstrap_ci95": [
+            0.005683,
+            0.05341
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 4,
+            "ties": 84,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 4,
+            "positive": 4,
+            "negative": 0,
+            "ties": 84,
+            "p_two_sided": 0.125
+          }
+        }
+      },
+      "top_embedding_contexts": [
+        {
+          "id": "amputee_ankle_sagittal_rom_asymmetry",
+          "count": 75
+        },
+        {
+          "id": "amputee_joint_moment_asymmetry",
+          "count": 73
+        },
+        {
+          "id": "amputee_hip_compensation_pattern",
+          "count": 33
+        },
+        {
+          "id": "amputee_knee_sagittal_pattern",
+          "count": 26
+        },
+        {
+          "id": "amputee_ankle_propulsion_push_off",
+          "count": 18
+        }
+      ],
+      "top_vectorless_nodes": [
+        {
+          "id": "amputee_joint_moment_asymmetry",
+          "count": 76
+        },
+        {
+          "id": "amputee_ankle_sagittal_rom_asymmetry",
+          "count": 75
+        },
+        {
+          "id": "amputee_hip_compensation_pattern",
+          "count": 34
+        },
+        {
+          "id": "amputee_knee_sagittal_pattern",
+          "count": 26
+        },
+        {
+          "id": "amputee_ankle_propulsion_push_off",
+          "count": 18
+        }
+      ]
+    },
+    "dataset=Above-Knee Amputee Gait | model=llama3.1:8b": {
+      "label": "dataset=Above-Knee Amputee Gait | model=llama3.1:8b",
+      "n": 88,
+      "datasets": {
+        "Above-Knee Amputee Gait": 88
+      },
+      "models": {
+        "llama3.1:8b": 88
+      },
+      "feature_count": {
+        "mean": 2.931818,
+        "sd": 0.938997,
+        "min": 1.0,
+        "max": 6.0
+      },
+      "metrics": {
+        "feature_coverage": {
+          "n": 88,
+          "embedding_mean": 0.942045,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.057955,
+          "diff_sd": 0.198383,
+          "bootstrap_ci95": [
+            0.021212,
+            0.103409
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 10,
+            "ties": 78,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 10,
+            "positive": 10,
+            "negative": 0,
+            "ties": 78,
+            "p_two_sided": 0.001953
+          }
+        },
+        "faithfulness": {
+          "n": 88,
+          "embedding_mean": 0.945075,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.054925,
+          "diff_sd": 0.206771,
+          "bootstrap_ci95": [
+            0.017045,
+            0.104167
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 7,
+            "ties": 81,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 7,
+            "positive": 7,
+            "negative": 0,
+            "ties": 81,
+            "p_two_sided": 0.015625
+          }
+        },
+        "hallucination_rate": {
+          "n": 88,
+          "embedding_mean": 0.054925,
+          "vectorless_mean": 0.0,
+          "mean_diff_vectorless_minus_embedding": -0.054925,
+          "diff_sd": 0.206771,
+          "bootstrap_ci95": [
+            -0.104167,
+            -0.017047
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 7,
+            "ties": 81,
+            "embedding_better_or_larger": 0,
+            "direction": "lower_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 7,
+            "positive": 0,
+            "negative": 7,
+            "ties": 81,
+            "p_two_sided": 0.015625
+          }
+        },
+        "citation_accuracy": {
+          "n": 88,
+          "embedding_mean": 0.965909,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.034091,
+          "diff_sd": 0.181463,
+          "bootstrap_ci95": [
+            0.0,
+            0.079545
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 3,
+            "ties": 85,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 3,
+            "positive": 3,
+            "negative": 0,
+            "ties": 85,
+            "p_two_sided": 0.25
+          }
+        },
+        "claim_count": {
+          "n": 88,
+          "embedding_mean": 2.761364,
+          "vectorless_mean": 2.909091,
+          "mean_diff_vectorless_minus_embedding": 0.147727,
+          "diff_sd": 0.574847,
+          "bootstrap_ci95": [
+            0.045455,
+            0.272727
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 10,
+            "ties": 76,
+            "embedding_better_or_larger": 2,
+            "direction": "count_only"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 12,
+            "positive": 10,
+            "negative": 2,
+            "ties": 76,
+            "p_two_sided": 0.038574
+          }
+        },
+        "quality_score": {
+          "n": 88,
+          "embedding_mean": 2.798105,
+          "vectorless_mean": 3.0,
+          "mean_diff_vectorless_minus_embedding": 0.201895,
+          "diff_sd": 0.772434,
+          "bootstrap_ci95": [
+            0.062881,
+            0.383714
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 10,
+            "ties": 78,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 10,
+            "positive": 10,
+            "negative": 0,
+            "ties": 78,
+            "p_two_sided": 0.001953
+          }
+        }
+      },
+      "top_embedding_contexts": [
+        {
+          "id": "amputee_ankle_sagittal_rom_asymmetry",
+          "count": 75
+        },
+        {
+          "id": "amputee_joint_moment_asymmetry",
+          "count": 73
+        },
+        {
+          "id": "amputee_hip_compensation_pattern",
+          "count": 33
+        },
+        {
+          "id": "amputee_knee_sagittal_pattern",
+          "count": 26
+        },
+        {
+          "id": "amputee_ankle_propulsion_push_off",
+          "count": 18
+        }
+      ],
+      "top_vectorless_nodes": [
+        {
+          "id": "amputee_joint_moment_asymmetry",
+          "count": 76
+        },
+        {
+          "id": "amputee_ankle_sagittal_rom_asymmetry",
+          "count": 75
+        },
+        {
+          "id": "amputee_hip_compensation_pattern",
+          "count": 34
+        },
+        {
+          "id": "amputee_knee_sagittal_pattern",
+          "count": 26
+        },
+        {
+          "id": "amputee_ankle_propulsion_push_off",
+          "count": 18
+        }
+      ]
+    },
+    "dataset=Above-Knee Amputee Gait | model=mistral-small:24b": {
+      "label": "dataset=Above-Knee Amputee Gait | model=mistral-small:24b",
+      "n": 88,
+      "datasets": {
+        "Above-Knee Amputee Gait": 88
+      },
+      "models": {
+        "mistral-small:24b": 88
+      },
+      "feature_count": {
+        "mean": 2.931818,
+        "sd": 0.938997,
+        "min": 1.0,
+        "max": 6.0
+      },
+      "metrics": {
+        "feature_coverage": {
+          "n": 88,
+          "embedding_mean": 0.991287,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.008712,
+          "diff_sd": 0.040044,
+          "bootstrap_ci95": [
+            0.001894,
+            0.017803
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 4,
+            "ties": 84,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 4,
+            "positive": 4,
+            "negative": 0,
+            "ties": 84,
+            "p_two_sided": 0.125
+          }
+        },
+        "faithfulness": {
+          "n": 88,
+          "embedding_mean": 1.0,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.0,
+          "diff_sd": 0.0,
+          "bootstrap_ci95": [
+            0.0,
+            0.0
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 88,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 0,
+            "positive": 0,
+            "negative": 0,
+            "ties": 88,
+            "p_two_sided": 1.0
+          }
+        },
+        "hallucination_rate": {
+          "n": 88,
+          "embedding_mean": 0.0,
+          "vectorless_mean": 0.0,
+          "mean_diff_vectorless_minus_embedding": 0.0,
+          "diff_sd": 0.0,
+          "bootstrap_ci95": [
+            0.0,
+            0.0
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 88,
+            "embedding_better_or_larger": 0,
+            "direction": "lower_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 0,
+            "positive": 0,
+            "negative": 0,
+            "ties": 88,
+            "p_two_sided": 1.0
+          }
+        },
+        "citation_accuracy": {
+          "n": 88,
+          "embedding_mean": 1.0,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.0,
+          "diff_sd": 0.0,
+          "bootstrap_ci95": [
+            0.0,
+            0.0
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 88,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 0,
+            "positive": 0,
+            "negative": 0,
+            "ties": 88,
+            "p_two_sided": 1.0
+          }
+        },
+        "claim_count": {
+          "n": 88,
+          "embedding_mean": 2.875,
+          "vectorless_mean": 2.886364,
+          "mean_diff_vectorless_minus_embedding": 0.011364,
+          "diff_sd": 0.281809,
+          "bootstrap_ci95": [
+            -0.045455,
+            0.068182
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 4,
+            "ties": 81,
+            "embedding_better_or_larger": 3,
+            "direction": "count_only"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 7,
+            "positive": 4,
+            "negative": 3,
+            "ties": 81,
+            "p_two_sided": 1.0
+          }
+        },
+        "quality_score": {
+          "n": 88,
+          "embedding_mean": 2.991287,
+          "vectorless_mean": 3.0,
+          "mean_diff_vectorless_minus_embedding": 0.008713,
+          "diff_sd": 0.040044,
+          "bootstrap_ci95": [
+            0.001894,
+            0.017803
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 4,
+            "ties": 84,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 4,
+            "positive": 4,
+            "negative": 0,
+            "ties": 84,
+            "p_two_sided": 0.125
+          }
+        }
+      },
+      "top_embedding_contexts": [
+        {
+          "id": "amputee_ankle_sagittal_rom_asymmetry",
+          "count": 75
+        },
+        {
+          "id": "amputee_joint_moment_asymmetry",
+          "count": 73
+        },
+        {
+          "id": "amputee_hip_compensation_pattern",
+          "count": 33
+        },
+        {
+          "id": "amputee_knee_sagittal_pattern",
+          "count": 26
+        },
+        {
+          "id": "amputee_ankle_propulsion_push_off",
+          "count": 18
+        }
+      ],
+      "top_vectorless_nodes": [
+        {
+          "id": "amputee_joint_moment_asymmetry",
+          "count": 76
+        },
+        {
+          "id": "amputee_ankle_sagittal_rom_asymmetry",
+          "count": 75
+        },
+        {
+          "id": "amputee_hip_compensation_pattern",
+          "count": 34
+        },
+        {
+          "id": "amputee_knee_sagittal_pattern",
+          "count": 26
+        },
+        {
+          "id": "amputee_ankle_propulsion_push_off",
+          "count": 18
+        }
+      ]
+    },
+    "dataset=Above-Knee Amputee Gait | model=qwen3:14b": {
+      "label": "dataset=Above-Knee Amputee Gait | model=qwen3:14b",
+      "n": 88,
+      "datasets": {
+        "Above-Knee Amputee Gait": 88
+      },
+      "models": {
+        "qwen3:14b": 88
+      },
+      "feature_count": {
+        "mean": 2.931818,
+        "sd": 0.938997,
+        "min": 1.0,
+        "max": 6.0
+      },
+      "metrics": {
+        "feature_coverage": {
+          "n": 88,
+          "embedding_mean": 0.991287,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.008712,
+          "diff_sd": 0.040044,
+          "bootstrap_ci95": [
+            0.001894,
+            0.017803
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 4,
+            "ties": 84,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 4,
+            "positive": 4,
+            "negative": 0,
+            "ties": 84,
+            "p_two_sided": 0.125
+          }
+        },
+        "faithfulness": {
+          "n": 88,
+          "embedding_mean": 0.991287,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.008712,
+          "diff_sd": 0.040044,
+          "bootstrap_ci95": [
+            0.001894,
+            0.017803
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 4,
+            "ties": 84,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 4,
+            "positive": 4,
+            "negative": 0,
+            "ties": 84,
+            "p_two_sided": 0.125
+          }
+        },
+        "hallucination_rate": {
+          "n": 88,
+          "embedding_mean": 0.008712,
+          "vectorless_mean": 0.0,
+          "mean_diff_vectorless_minus_embedding": -0.008712,
+          "diff_sd": 0.040044,
+          "bootstrap_ci95": [
+            -0.017803,
+            -0.001894
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 4,
+            "ties": 84,
+            "embedding_better_or_larger": 0,
+            "direction": "lower_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 4,
+            "positive": 0,
+            "negative": 4,
+            "ties": 84,
+            "p_two_sided": 0.125
+          }
+        },
+        "citation_accuracy": {
+          "n": 88,
+          "embedding_mean": 1.0,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.0,
+          "diff_sd": 0.0,
+          "bootstrap_ci95": [
+            0.0,
+            0.0
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 88,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 0,
+            "positive": 0,
+            "negative": 0,
+            "ties": 88,
+            "p_two_sided": 1.0
+          }
+        },
+        "claim_count": {
+          "n": 88,
+          "embedding_mean": 2.886364,
+          "vectorless_mean": 2.931818,
+          "mean_diff_vectorless_minus_embedding": 0.045455,
+          "diff_sd": 0.208299,
+          "bootstrap_ci95": [
+            0.011364,
+            0.090909
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 4,
+            "ties": 84,
+            "embedding_better_or_larger": 0,
+            "direction": "count_only"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 4,
+            "positive": 4,
+            "negative": 0,
+            "ties": 84,
+            "p_two_sided": 0.125
+          }
+        },
+        "quality_score": {
+          "n": 88,
+          "embedding_mean": 2.973863,
+          "vectorless_mean": 3.0,
+          "mean_diff_vectorless_minus_embedding": 0.026138,
+          "diff_sd": 0.120132,
+          "bootstrap_ci95": [
+            0.005683,
+            0.05341
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 4,
+            "ties": 84,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 4,
+            "positive": 4,
+            "negative": 0,
+            "ties": 84,
+            "p_two_sided": 0.125
+          }
+        }
+      },
+      "top_embedding_contexts": [
+        {
+          "id": "amputee_ankle_sagittal_rom_asymmetry",
+          "count": 75
+        },
+        {
+          "id": "amputee_joint_moment_asymmetry",
+          "count": 73
+        },
+        {
+          "id": "amputee_hip_compensation_pattern",
+          "count": 33
+        },
+        {
+          "id": "amputee_knee_sagittal_pattern",
+          "count": 26
+        },
+        {
+          "id": "amputee_ankle_propulsion_push_off",
+          "count": 18
+        }
+      ],
+      "top_vectorless_nodes": [
+        {
+          "id": "amputee_joint_moment_asymmetry",
+          "count": 76
+        },
+        {
+          "id": "amputee_ankle_sagittal_rom_asymmetry",
+          "count": 75
+        },
+        {
+          "id": "amputee_hip_compensation_pattern",
+          "count": 34
+        },
+        {
+          "id": "amputee_knee_sagittal_pattern",
+          "count": 26
+        },
+        {
+          "id": "amputee_ankle_propulsion_push_off",
+          "count": 18
+        }
+      ]
+    }
+  },
+  "notes": [
+    "All comparisons are paired within the same case and LLM.",
+    "Mean difference is vectorless_tree_rag minus embedding_rag.",
+    "For hallucination_rate, negative mean difference favors vectorless_tree_rag because lower is better.",
+    "Sign-test p-values are exact two-sided tests over non-tied paired differences.",
+    "Bootstrap CIs are percentile intervals for the mean paired difference.",
+    "Records with status=no_features are counted but excluded from inferential paired tests."
+  ]
+}

@@ -1,0 +1,15 @@
+# Downloaded datasets and derived local inputs
+Data_2_Clinical_Gait_Signals_with_Wearable_Sensors_from_Healthy_Neurological/
+Data_3_GAITEX/
+Data_4_Above_Knee_Amputee_Gait/
+prepared_data/
+
+# Local scratch outputs, logs, caches, and environments
+outputs/
+*.log
+*.pid
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.DS_Store

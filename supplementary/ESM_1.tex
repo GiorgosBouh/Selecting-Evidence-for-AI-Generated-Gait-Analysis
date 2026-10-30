@@ -1,0 +1,188 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{xurl}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{adjustbox}
+\usepackage{longtable}
+\urlstyle{same}
+\begin{document}
+\title{Supplementary Material: Making Language-Model Explanations of Gait Data More Traceable}
+\author{Georgios Bouchouras and Konstantinos Kotis}
+\date{}
+\maketitle
+
+This supplementary file contains methodological audits, additional retrieval sensitivity results, model-specific results, and prompt templates that support the main manuscript.
+
+\section*{Supplementary Tables}
+
+\begin{table}[!ht]
+\caption{Supplementary Robustness and methodological audits. These audits address baseline strength, TGR confounding, context budget, parse/schema reliability, prompt sensitivity, modern flat baselines, and semantic usefulness.}
+\label{stab:methodology-audits}
+\centering
+\scriptsize
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.20\textwidth}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.40\textwidth}@{}}
+\toprule
+Audit & Result & Interpretation \\
+\midrule
+Generation/schema status & 2,460 total records; 711 no-feature records; 1,749 attempted LLM generations; 0 unrecoverable parser or schema failures & No generated record was excluded because of malformed output, but recoverable JSON fallback extractions were not logged separately \\
+Context budget & Overall FR mean = 3.187 contexts; TGR mean = 2.765 nodes; TGR used fewer contexts in 742 records, equal contexts in 843, and more contexts in 164 & TGR did not have a larger context budget overall; the amputee dataset was nearly equal (FR 2.557, TGR 2.602) \\
+Deterministic taxonomy selector parity & Final TGR contexts equaled deterministic exact-tag taxonomy selection in 264/264 amputee records and 219/219 GAITEX records; equality was lower in Clinical Gait Signals (80/540) and Health\&Gait (0/726) & The strongest positive TGR result was not driven by unconstrained LLM node selection; weaker datasets were more sensitive to taxonomy routing and selector behavior \\
+Unsupported claims & Overall unsupported claims were 115 for FR and 234 for TGR; in the amputee dataset, unsupported claims decreased from 19 with FR to 0 with TGR; in Health\&Gait they increased from 11 to 174 & TGR is not globally safer; it helps when taxonomy structure matches the evidence and can hurt when it does not \\
+Prompt-sensitivity smoke & 16 additional generations using two prompt variants, two models, two methods, and two cases. In the Health\&Gait case, both methods had 0 unsupported claims. In the amputee case, FR produced 4 unsupported claims and TGR produced 0 & This small smoke test supports the amputee direction under prompt perturbation, but it is not a full prompt robustness study \\
+Targeted ablation and modern-flat baselines & 72 additional generations on a stratified informative sample: flat coverage-matched retrieval, deterministic taxonomy without LLM node selection, BM25, dense Ollama retrieval, and hybrid feature-aware variants & Deterministic taxonomy and coverage-matched flat retrieval were nearly tied overall; pure BM25 and pure dense retrieval lost feature coverage, while feature-aware hybrid retrieval achieved the strongest automatic grounding in the sample \\
+Modern retriever sensitivity analysis & 216 additional records over a normalized 24-unit evidence corpus, comparing BM25, dense, biomedical dense, hybrid BM25+dense, and LLM-reranked hybrid retrieval across top-k 3, 5, and 8 & Hybrid BM25+dense was strongest overall; LLM reranking, biomedical dense retrieval, and dense-only retrieval did not dominate this bounded check \\
+Secondary semantic audit & 4,517 blinded LLM-judge records for Clinical Gait Signals and Health\&Gait. Mean usefulness was 3.447 for FR and 3.383 for TGR; winner counts were FR 1,955, TGR 1,775, tie 787 & Semantic usefulness did not automatically improve with TGR, again showing that the best method depends on the evidence \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\begin{table}[!ht]
+\caption{Supplementary Full Ontology-Guided Graph Retrieval (OGR) grounding metrics from the primary-prompt rerun used in the main FR/TGR/OGR comparison. OGR maps case features to GADO concepts, uses a graph constructed from GADO OWL subclass relations and object-property domain/range links, expands one ontology-graph hop, and retrieves the top 3 linked evidence units before using the same generator and support checker as FR and TGR.}
+\label{stab:ogr-full-metrics}
+\centering
+\scriptsize
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{@{}lrrrrrrr@{}}
+\toprule
+Dataset & N & Contexts & Coverage & Faithfulness & Unsup. rate & Citation & Quality \\
+\midrule
+Clinical Gait Signals & 540 & 3.0 & 0.9661 & 0.9803 & 0.0197 & 0.9963 & 2.9229 \\
+GAITEX & 219 & 3.0 & 0.9007 & 0.9361 & 0.0639 & 1.0000 & 2.7728 \\
+Health\&Gait & 726 & 3.0 & 0.9939 & 0.9937 & 0.0063 & 0.9972 & 2.9786 \\
+Above-Knee Amputee Gait & 264 & 3.0 & 0.9587 & 0.9600 & 0.0400 & 1.0000 & 2.8788 \\
+\midrule
+Overall & 1749 & 3.0 & 0.9683 & 0.9773 & 0.0227 & 0.9977 & 2.9206 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\begin{table}[!ht]
+\caption{Supplementary Targeted ablation and modern flat-baseline results. Each method was evaluated on the same 12 case-model pairs: one informative case per dataset and generator model. Context counts were matched to deterministic taxonomy node count for each case.}
+\label{stab:targeted-ablation-baselines}
+\centering
+\scriptsize
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{@{}lrrrrrrr@{}}
+\toprule
+Method & N & Mean contexts & Feature coverage & Faithfulness & Unsupported rate & Citation accuracy & Quality \\
+\midrule
+Flat coverage-matched & 12 & 2.5833 & 0.9578 & 0.9697 & 0.0303 & 1.0000 & 2.8972 \\
+Deterministic taxonomy & 12 & 2.5833 & 0.9881 & 0.9881 & 0.0119 & 1.0000 & 2.9643 \\
+BM25 flat & 12 & 2.5833 & 0.9246 & 0.9722 & 0.0278 & 1.0000 & 2.8691 \\
+Hybrid BM25+feature overlap & 12 & 2.5833 & 1.0000 & 1.0000 & 0.0000 & 1.0000 & 3.0000 \\
+Dense Ollama flat & 12 & 2.5833 & 0.3651 & 0.3989 & 0.6011 & 0.7500 & 0.9129 \\
+Hybrid dense+feature overlap & 12 & 2.5833 & 0.9578 & 0.9697 & 0.0303 & 1.0000 & 2.8972 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\begin{table}[!ht]
+\caption{Supplementary TGR coverage-control ablation. Quality is the composite deterministic grounding score used in the main manuscript; higher is better, maximum = 3.0. All arms use the same 1,749 matched case-model records.}
+\label{stab:tgr-coverage-control-ablation}
+\centering
+\scriptsize
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Dataset & N & Full TGR & No exact coverage & Deterministic taxonomy & Flat coverage matched \\
+\midrule
+Above-Knee Amputee Gait & 264 & 3.0000 & 2.8119 & 3.0000 & 2.9991 \\
+Clinical Gait Signals & 540 & 2.8932 & 2.7044 & 2.9524 & 2.8948 \\
+GAITEX & 219 & 2.9428 & 1.0034 & 2.9954 & 2.9874 \\
+Health\&Gait & 726 & 2.4575 & 2.7262 & 2.9966 & 2.9925 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\begin{table}[!ht]
+\caption{Supplementary OGR coverage-repair failure-mode audit. This diagnostic used the earlier audit-prompt OGR run, not the primary-prompt OGR rerun used for the main FR/TGR/OGR comparison. Standard OGR first retrieved top-k 3 evidence units with one ontology hop over the GADO-derived graph. The repair then added evidence units for features not covered by standard OGR. This is not a primary fixed-top-k comparison because repaired rows could use extra contexts.}
+\label{stab:ogr-coverage-repair-audit}
+\centering
+\scriptsize
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Dataset & N & Audit-prompt standard OGR & Audit-prompt repaired OGR & Repair rows & Difference \\
+\midrule
+Above-Knee Amputee Gait & 264 & 2.8773 & 2.9962 & 39 & +0.1189 \\
+Clinical Gait Signals & 540 & 2.9143 & 2.9143 & 0 & +0.0000 \\
+GAITEX & 219 & 2.9909 & 2.9909 & 0 & +0.0000 \\
+Health\&Gait & 726 & 2.9929 & 2.9929 & 0 & +0.0000 \\
+\midrule
+Overall & 1749 & 2.9509 & 2.9689 & 39 & +0.0180 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\begin{table}[!ht]
+\caption{Supplementary Modern retriever sensitivity benchmark on the stratified sanity subset. Higher coverage, faithfulness, citation accuracy, and quality are better; lower unsupported rate is better.}
+\label{stab:modern-retriever-sensitivity}
+\centering
+\scriptsize
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+Method & N & Coverage & Faithfulness & Unsup. rate & Citation & Quality \\
+\midrule
+Hybrid BM25+dense & 36 & 0.9629 & 0.9889 & 0.0111 & 1.0000 & 2.9407 \\
+Hybrid + LLM rerank & 36 & 0.9579 & 0.9639 & 0.0361 & 1.0000 & 2.8857 \\
+Dense, all-MiniLM-L12-v2 & 36 & 0.9205 & 0.9389 & 0.0611 & 0.9722 & 2.7705 \\
+BM25 & 36 & 0.9114 & 0.9288 & 0.0712 & 0.9722 & 2.7412 \\
+Dense, PubMedBERT-MS MARCO & 36 & 0.8580 & 0.8841 & 0.1159 & 1.0000 & 2.6263 \\
+Dense, Ollama llama3.1:8b & 36 & 0.8062 & 0.8417 & 0.1583 & 0.9722 & 2.4618 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\begin{table}[!ht]
+\caption{Supplementary Model-specific composite quality scores by dataset and retrieval method. The best value in each dataset/model row is shown in the final column.}
+\label{stab:model-specific-effects}
+\centering
+\scriptsize
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{@{}llllll@{}}
+\toprule
+Dataset/model & FR quality & TGR quality & OGR quality & Best & Pattern \\
+\midrule
+Clinical Gait Signals / \path|llama3.1:8b| & 2.9094 & 2.8641 & 2.8950 & FR & FR strongest \\
+Clinical Gait Signals / \path|mistral-small:24b| & 2.9573 & 2.8318 & 2.9272 & FR & FR strongest \\
+Clinical Gait Signals / \path|qwen3:14b| & 2.9504 & 2.9836 & 2.9464 & TGR & TGR strongest \\
+GAITEX / \path|llama3.1:8b| & 2.8185 & 2.8523 & 2.4486 & TGR & TGR strongest \\
+GAITEX / \path|mistral-small:24b| & 2.9726 & 2.9760 & 2.8733 & TGR & TGR strongest \\
+GAITEX / \path|qwen3:14b| & 2.9760 & 3.0000 & 2.9966 & TGR & TGR strongest \\
+Health\&Gait / \path|llama3.1:8b| & 2.9891 & 1.5501 & 2.9609 & FR & FR strongest \\
+Health\&Gait / \path|mistral-small:24b| & 2.9986 & 2.8223 & 2.9748 & FR & FR strongest \\
+Health\&Gait / \path|qwen3:14b| & 2.9824 & 3.0000 & 3.0000 & TGR/OGR & Tied \\
+Amputee / \path|llama3.1:8b| & 2.7981 & 3.0000 & 2.8739 & TGR & TGR strongest \\
+Amputee / \path|mistral-small:24b| & 2.9913 & 3.0000 & 2.8807 & TGR & TGR strongest \\
+Amputee / \path|qwen3:14b| & 2.9739 & 3.0000 & 2.8818 & TGR & TGR strongest \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+
+\section*{Supplementary Prompt and Claim-Audit Artifacts}
+
+The exact generation prompts, JSON output schema, deterministic support-checking rules, and representative claim-level audit examples are provided as repository artifacts rather than repeated in full here. This keeps the supplementary PDF readable while preserving reproducibility.
+
+The recommended repository files are:
+
+\begin{itemize}
+\item \path|docs/reproducibility/generation_prompts_and_schema.md| and \path|.json| for the exact prompt templates, output schema, and generation settings.
+\item \path|docs/reproducibility/support_checking_rules.md| for deterministic claim-support and metric rules.
+\item \path|docs/reproducibility/claim_audit_examples.json| and \path|.csv| for representative case-feature, retrieved-context, generated-claim, and support-label examples.
+\end{itemize}
+
+Full generated outputs and claim-level tables are better archived as repository or DOI-backed data files because they are too large for a readable supplementary PDF. The reproducibility folder also documents the OGR graph construction, the primary versus audit prompt scope, and the deterministic quality-score caveat. The primary-prompt OGR rerun used for the final main comparison is archived as \path|outputs/ontology_graph_full_primary_prompt_2026-07-02.jsonl|.
+
+
+\end{document}

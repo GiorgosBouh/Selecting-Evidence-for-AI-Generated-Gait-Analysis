@@ -1,0 +1,85 @@
+{
+  "created": "2026-06-14",
+  "rule": "A disease/pathology label may be used in a generated claim only if it is both supported by the source PDFs and allowed by the case/dataset metadata. For Data_2, claims are restricted to the participant's pathologyKey/pathology metadata; diseases only mentioned in general PDFs are out of scope for Data_2 unless they are the actual dataset label.",
+  "pdf_scope": {
+    "pdf_count_extracted_for_check": 22,
+    "text_extraction_dir": "/tmp/gait_all_pdf_texts",
+    "source_dirs": [
+      "gait_analysis_reviews/",
+      "sources/pdfs/",
+      "Data_1_Health_Gait_a_dataset_for_gait_based_analysis/",
+      "Data_2_Clinical_Gait_Signals_with_Wearable_Sensors_from_Healthy_Neurological/"
+    ]
+  },
+  "data2_allowed_pathology_labels": {
+    "HS": {
+      "pathology": "healthy subject",
+      "group": "healthy",
+      "claim_scope": "normal/control label only; do not infer disease"
+    },
+    "PD": {
+      "pathology": "parkinson disease",
+      "group": "neuro",
+      "clinical_score": "UPDRS III (/108)",
+      "feature": "pathology_pd"
+    },
+    "CVA": {
+      "pathology": "cerebrovascular accident",
+      "group": "neuro",
+      "clinical_score": "FMA-LE (/34)",
+      "feature": "pathology_cva"
+    },
+    "CIPN": {
+      "pathology": "toxic peripheral neuropathy",
+      "group": "neuro",
+      "clinical_score": "TNSc (/28)",
+      "feature": "pathology_cipn"
+    },
+    "RIL": {
+      "pathology": "radiation-induced leukoencephalopathy",
+      "group": "neuro",
+      "clinical_score": "mSS (/30)",
+      "feature": "pathology_ril"
+    },
+    "ACL": {
+      "pathology": "anterior cruciate ligament injury",
+      "group": "ortho",
+      "clinical_score": "IKDC (/100)",
+      "feature": "pathology_acl"
+    },
+    "KOA": {
+      "pathology": "knee osteoarthritis",
+      "group": "ortho",
+      "clinical_score": "WOMAC (/100)",
+      "feature": "pathology_koa"
+    },
+    "HOA": {
+      "pathology": "hip osteoarthritis",
+      "group": "ortho",
+      "clinical_score": "WOMAC (/100)",
+      "feature": "pathology_hoa"
+    }
+  },
+  "source_supported_but_not_data2_labels": [
+    "ataxia/cerebellar gait",
+    "functional gait disorder",
+    "vestibular disorder",
+    "multiple sclerosis",
+    "Huntington disease",
+    "cerebral palsy/spastic diplegia",
+    "amputation/prosthetic gait",
+    "diabetic gait/foot",
+    "myopathy/muscular dystrophy",
+    "spinal cord injury/myelodysplasia",
+    "Alzheimer/dementia"
+  ],
+  "enforcement": {
+    "prompt_guard": "scripts/run_three_llm_full_dataset_pilot.py:pathology_scope_note",
+    "post_generation_filter": "scripts/run_three_llm_full_dataset_pilot.py:pathology_scope_violation",
+    "applies_to": [
+      "embedding_rag",
+      "vectorless_tree_rag"
+    ],
+    "unsupported_handling": "Out-of-scope pathology terms are moved to unsupported_claims and penalized by hallucination/faithfulness metrics."
+  }
+}

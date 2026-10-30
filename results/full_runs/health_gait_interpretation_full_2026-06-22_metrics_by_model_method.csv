@@ -1,0 +1,7 @@
+model,method,n_records,feature_coverage_mean,faithfulness_mean,hallucination_rate_mean,citation_accuracy_mean,quality_score_mean,mean_claims_per_case,total_claims,unsupported_claims,records_with_unsupported
+llama3.1:8b,embedding_rag,242,0.998347,0.995386,0.004614,1.0,2.989119,2.305785,558,4,4
+llama3.1:8b,vectorless_tree_rag,242,0.625826,0.629476,0.370524,0.665289,1.550068,1.305785,316,162,99
+mistral-small:24b,embedding_rag,242,0.998623,1.0,0.0,1.0,2.998623,2.119835,513,0,0
+mistral-small:24b,vectorless_tree_rag,242,0.954546,0.954545,0.045455,0.958678,2.822314,1.793388,434,12,12
+qwen3:14b,embedding_rag,242,0.994766,0.993802,0.006198,1.0,2.982369,2.161157,523,7,6
+qwen3:14b,vectorless_tree_rag,242,1.0,1.0,0.0,1.0,3.0,1.987603,481,0,0

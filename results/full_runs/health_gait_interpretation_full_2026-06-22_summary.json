@@ -1,0 +1,1798 @@
+{
+  "input_record_count": 1194,
+  "analyzable_record_count": 726,
+  "status_counts": {
+    "ok": 726,
+    "no_features": 468
+  },
+  "dataset_record_counts": {
+    "Health&Gait": 1194
+  },
+  "model_record_counts": {
+    "mistral-small:24b": 398,
+    "qwen3:14b": 398,
+    "llama3.1:8b": 398
+  },
+  "groups": {
+    "overall": {
+      "label": "overall",
+      "n": 726,
+      "datasets": {
+        "Health&Gait": 726
+      },
+      "models": {
+        "mistral-small:24b": 242,
+        "qwen3:14b": 242,
+        "llama3.1:8b": 242
+      },
+      "feature_count": {
+        "mean": 2.235537,
+        "sd": 1.35081,
+        "min": 1.0,
+        "max": 8.0
+      },
+      "metrics": {
+        "feature_coverage": {
+          "n": 726,
+          "embedding_mean": 0.997245,
+          "vectorless_mean": 0.860124,
+          "mean_diff_vectorless_minus_embedding": -0.137121,
+          "diff_sd": 0.337121,
+          "bootstrap_ci95": [
+            -0.161157,
+            -0.114738
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 6,
+            "ties": 608,
+            "embedding_better_or_larger": 112,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 118,
+            "positive": 6,
+            "negative": 112,
+            "ties": 608,
+            "p_two_sided": 0.0
+          }
+        },
+        "faithfulness": {
+          "n": 726,
+          "embedding_mean": 0.996396,
+          "vectorless_mean": 0.861341,
+          "mean_diff_vectorless_minus_embedding": -0.135055,
+          "diff_sd": 0.338603,
+          "bootstrap_ci95": [
+            -0.159573,
+            -0.112512
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 9,
+            "ties": 607,
+            "embedding_better_or_larger": 110,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 119,
+            "positive": 9,
+            "negative": 110,
+            "ties": 607,
+            "p_two_sided": 0.0
+          }
+        },
+        "hallucination_rate": {
+          "n": 726,
+          "embedding_mean": 0.003604,
+          "vectorless_mean": 0.138659,
+          "mean_diff_vectorless_minus_embedding": 0.135055,
+          "diff_sd": 0.338603,
+          "bootstrap_ci95": [
+            0.112489,
+            0.159344
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 9,
+            "ties": 607,
+            "embedding_better_or_larger": 110,
+            "direction": "lower_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 119,
+            "positive": 110,
+            "negative": 9,
+            "ties": 607,
+            "p_two_sided": 0.0
+          }
+        },
+        "citation_accuracy": {
+          "n": 726,
+          "embedding_mean": 1.0,
+          "vectorless_mean": 0.874656,
+          "mean_diff_vectorless_minus_embedding": -0.125344,
+          "diff_sd": 0.331109,
+          "bootstrap_ci95": [
+            -0.150138,
+            -0.103306
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 635,
+            "embedding_better_or_larger": 91,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 91,
+            "positive": 0,
+            "negative": 91,
+            "ties": 635,
+            "p_two_sided": 0.0
+          }
+        },
+        "claim_count": {
+          "n": 726,
+          "embedding_mean": 2.195592,
+          "vectorless_mean": 1.695592,
+          "mean_diff_vectorless_minus_embedding": -0.5,
+          "diff_sd": 0.971707,
+          "bootstrap_ci95": [
+            -0.571625,
+            -0.429752
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 26,
+            "ties": 472,
+            "embedding_better_or_larger": 228,
+            "direction": "count_only"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 254,
+            "positive": 26,
+            "negative": 228,
+            "ties": 472,
+            "p_two_sided": 0.0
+          }
+        },
+        "quality_score": {
+          "n": 726,
+          "embedding_mean": 2.990037,
+          "vectorless_mean": 2.457461,
+          "mean_diff_vectorless_minus_embedding": -0.532576,
+          "diff_sd": 1.336598,
+          "bootstrap_ci95": [
+            -0.62989,
+            -0.443136
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 9,
+            "ties": 605,
+            "embedding_better_or_larger": 112,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 121,
+            "positive": 9,
+            "negative": 112,
+            "ties": 605,
+            "p_two_sided": 0.0
+          }
+        }
+      },
+      "top_embedding_contexts": [
+        {
+          "id": "health_gait_dataset_schema",
+          "count": 726
+        },
+        {
+          "id": "fukuchi_speed_effects",
+          "count": 573
+        },
+        {
+          "id": "perry_velocity_cadence_timing",
+          "count": 471
+        },
+        {
+          "id": "perry_support_phase_stability",
+          "count": 369
+        },
+        {
+          "id": "perry_step_stride_progression",
+          "count": 252
+        }
+      ],
+      "top_vectorless_nodes": [
+        {
+          "id": "perry_support_phase_stability",
+          "count": 383
+        },
+        {
+          "id": "perry_velocity_cadence_timing",
+          "count": 331
+        },
+        {
+          "id": "perry_data2_progression_speed_length",
+          "count": 328
+        },
+        {
+          "id": "pathology_context_neurological_orthopedic_gait",
+          "count": 204
+        },
+        {
+          "id": "clinical_dataset_biomechanical_feature_provenance",
+          "count": 201
+        },
+        {
+          "id": "perry_step_stride_progression",
+          "count": 178
+        },
+        {
+          "id": "health_gait_csv_parameter_mapping",
+          "count": 136
+        },
+        {
+          "id": "perry_data2_phase_support_asymmetry",
+          "count": 121
+        },
+        {
+          "id": "fukuchi_speed_effects",
+          "count": 91
+        },
+        {
+          "id": "clinical_gait_analysis_general_context",
+          "count": 1
+        }
+      ]
+    },
+    "dataset=Health&Gait": {
+      "label": "dataset=Health&Gait",
+      "n": 726,
+      "datasets": {
+        "Health&Gait": 726
+      },
+      "models": {
+        "mistral-small:24b": 242,
+        "qwen3:14b": 242,
+        "llama3.1:8b": 242
+      },
+      "feature_count": {
+        "mean": 2.235537,
+        "sd": 1.35081,
+        "min": 1.0,
+        "max": 8.0
+      },
+      "metrics": {
+        "feature_coverage": {
+          "n": 726,
+          "embedding_mean": 0.997245,
+          "vectorless_mean": 0.860124,
+          "mean_diff_vectorless_minus_embedding": -0.137121,
+          "diff_sd": 0.337121,
+          "bootstrap_ci95": [
+            -0.161157,
+            -0.114738
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 6,
+            "ties": 608,
+            "embedding_better_or_larger": 112,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 118,
+            "positive": 6,
+            "negative": 112,
+            "ties": 608,
+            "p_two_sided": 0.0
+          }
+        },
+        "faithfulness": {
+          "n": 726,
+          "embedding_mean": 0.996396,
+          "vectorless_mean": 0.861341,
+          "mean_diff_vectorless_minus_embedding": -0.135055,
+          "diff_sd": 0.338603,
+          "bootstrap_ci95": [
+            -0.159573,
+            -0.112512
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 9,
+            "ties": 607,
+            "embedding_better_or_larger": 110,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 119,
+            "positive": 9,
+            "negative": 110,
+            "ties": 607,
+            "p_two_sided": 0.0
+          }
+        },
+        "hallucination_rate": {
+          "n": 726,
+          "embedding_mean": 0.003604,
+          "vectorless_mean": 0.138659,
+          "mean_diff_vectorless_minus_embedding": 0.135055,
+          "diff_sd": 0.338603,
+          "bootstrap_ci95": [
+            0.112489,
+            0.159344
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 9,
+            "ties": 607,
+            "embedding_better_or_larger": 110,
+            "direction": "lower_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 119,
+            "positive": 110,
+            "negative": 9,
+            "ties": 607,
+            "p_two_sided": 0.0
+          }
+        },
+        "citation_accuracy": {
+          "n": 726,
+          "embedding_mean": 1.0,
+          "vectorless_mean": 0.874656,
+          "mean_diff_vectorless_minus_embedding": -0.125344,
+          "diff_sd": 0.331109,
+          "bootstrap_ci95": [
+            -0.150138,
+            -0.103306
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 635,
+            "embedding_better_or_larger": 91,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 91,
+            "positive": 0,
+            "negative": 91,
+            "ties": 635,
+            "p_two_sided": 0.0
+          }
+        },
+        "claim_count": {
+          "n": 726,
+          "embedding_mean": 2.195592,
+          "vectorless_mean": 1.695592,
+          "mean_diff_vectorless_minus_embedding": -0.5,
+          "diff_sd": 0.971707,
+          "bootstrap_ci95": [
+            -0.571625,
+            -0.429752
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 26,
+            "ties": 472,
+            "embedding_better_or_larger": 228,
+            "direction": "count_only"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 254,
+            "positive": 26,
+            "negative": 228,
+            "ties": 472,
+            "p_two_sided": 0.0
+          }
+        },
+        "quality_score": {
+          "n": 726,
+          "embedding_mean": 2.990037,
+          "vectorless_mean": 2.457461,
+          "mean_diff_vectorless_minus_embedding": -0.532576,
+          "diff_sd": 1.336598,
+          "bootstrap_ci95": [
+            -0.62989,
+            -0.443136
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 9,
+            "ties": 605,
+            "embedding_better_or_larger": 112,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 121,
+            "positive": 9,
+            "negative": 112,
+            "ties": 605,
+            "p_two_sided": 0.0
+          }
+        }
+      },
+      "top_embedding_contexts": [
+        {
+          "id": "health_gait_dataset_schema",
+          "count": 726
+        },
+        {
+          "id": "fukuchi_speed_effects",
+          "count": 573
+        },
+        {
+          "id": "perry_velocity_cadence_timing",
+          "count": 471
+        },
+        {
+          "id": "perry_support_phase_stability",
+          "count": 369
+        },
+        {
+          "id": "perry_step_stride_progression",
+          "count": 252
+        }
+      ],
+      "top_vectorless_nodes": [
+        {
+          "id": "perry_support_phase_stability",
+          "count": 383
+        },
+        {
+          "id": "perry_velocity_cadence_timing",
+          "count": 331
+        },
+        {
+          "id": "perry_data2_progression_speed_length",
+          "count": 328
+        },
+        {
+          "id": "pathology_context_neurological_orthopedic_gait",
+          "count": 204
+        },
+        {
+          "id": "clinical_dataset_biomechanical_feature_provenance",
+          "count": 201
+        },
+        {
+          "id": "perry_step_stride_progression",
+          "count": 178
+        },
+        {
+          "id": "health_gait_csv_parameter_mapping",
+          "count": 136
+        },
+        {
+          "id": "perry_data2_phase_support_asymmetry",
+          "count": 121
+        },
+        {
+          "id": "fukuchi_speed_effects",
+          "count": 91
+        },
+        {
+          "id": "clinical_gait_analysis_general_context",
+          "count": 1
+        }
+      ]
+    },
+    "model=llama3.1:8b": {
+      "label": "model=llama3.1:8b",
+      "n": 242,
+      "datasets": {
+        "Health&Gait": 242
+      },
+      "models": {
+        "llama3.1:8b": 242
+      },
+      "feature_count": {
+        "mean": 2.235537,
+        "sd": 1.35081,
+        "min": 1.0,
+        "max": 8.0
+      },
+      "metrics": {
+        "feature_coverage": {
+          "n": 242,
+          "embedding_mean": 0.998347,
+          "vectorless_mean": 0.625826,
+          "mean_diff_vectorless_minus_embedding": -0.372521,
+          "diff_sd": 0.463918,
+          "bootstrap_ci95": [
+            -0.431819,
+            -0.314326
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 142,
+            "embedding_better_or_larger": 100,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 100,
+            "positive": 0,
+            "negative": 100,
+            "ties": 142,
+            "p_two_sided": 0.0
+          }
+        },
+        "faithfulness": {
+          "n": 242,
+          "embedding_mean": 0.995386,
+          "vectorless_mean": 0.629476,
+          "mean_diff_vectorless_minus_embedding": -0.36591,
+          "diff_sd": 0.468748,
+          "bootstrap_ci95": [
+            -0.426516,
+            -0.308058
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 3,
+            "ties": 141,
+            "embedding_better_or_larger": 98,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 101,
+            "positive": 3,
+            "negative": 98,
+            "ties": 141,
+            "p_two_sided": 0.0
+          }
+        },
+        "hallucination_rate": {
+          "n": 242,
+          "embedding_mean": 0.004614,
+          "vectorless_mean": 0.370524,
+          "mean_diff_vectorless_minus_embedding": 0.36591,
+          "diff_sd": 0.468748,
+          "bootstrap_ci95": [
+            0.307852,
+            0.426378
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 3,
+            "ties": 141,
+            "embedding_better_or_larger": 98,
+            "direction": "lower_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 101,
+            "positive": 98,
+            "negative": 3,
+            "ties": 141,
+            "p_two_sided": 0.0
+          }
+        },
+        "citation_accuracy": {
+          "n": 242,
+          "embedding_mean": 1.0,
+          "vectorless_mean": 0.665289,
+          "mean_diff_vectorless_minus_embedding": -0.334711,
+          "diff_sd": 0.471889,
+          "bootstrap_ci95": [
+            -0.392562,
+            -0.27686
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 161,
+            "embedding_better_or_larger": 81,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 81,
+            "positive": 0,
+            "negative": 81,
+            "ties": 161,
+            "p_two_sided": 0.0
+          }
+        },
+        "claim_count": {
+          "n": 242,
+          "embedding_mean": 2.305785,
+          "vectorless_mean": 1.305785,
+          "mean_diff_vectorless_minus_embedding": -1.0,
+          "diff_sd": 1.323656,
+          "bootstrap_ci95": [
+            -1.157025,
+            -0.834711
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 15,
+            "ties": 103,
+            "embedding_better_or_larger": 124,
+            "direction": "count_only"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 139,
+            "positive": 15,
+            "negative": 124,
+            "ties": 103,
+            "p_two_sided": 0.0
+          }
+        },
+        "quality_score": {
+          "n": 242,
+          "embedding_mean": 2.989119,
+          "vectorless_mean": 1.550068,
+          "mean_diff_vectorless_minus_embedding": -1.439051,
+          "diff_sd": 1.857552,
+          "bootstrap_ci95": [
+            -1.675896,
+            -1.209781
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 3,
+            "ties": 139,
+            "embedding_better_or_larger": 100,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 103,
+            "positive": 3,
+            "negative": 100,
+            "ties": 139,
+            "p_two_sided": 0.0
+          }
+        }
+      },
+      "top_embedding_contexts": [
+        {
+          "id": "health_gait_dataset_schema",
+          "count": 242
+        },
+        {
+          "id": "fukuchi_speed_effects",
+          "count": 191
+        },
+        {
+          "id": "perry_velocity_cadence_timing",
+          "count": 157
+        },
+        {
+          "id": "perry_support_phase_stability",
+          "count": 123
+        },
+        {
+          "id": "perry_step_stride_progression",
+          "count": 84
+        }
+      ],
+      "top_vectorless_nodes": [
+        {
+          "id": "perry_data2_progression_speed_length",
+          "count": 236
+        },
+        {
+          "id": "clinical_dataset_biomechanical_feature_provenance",
+          "count": 126
+        },
+        {
+          "id": "perry_data2_phase_support_asymmetry",
+          "count": 118
+        },
+        {
+          "id": "health_gait_csv_parameter_mapping",
+          "count": 110
+        },
+        {
+          "id": "perry_support_phase_stability",
+          "count": 87
+        },
+        {
+          "id": "perry_velocity_cadence_timing",
+          "count": 20
+        },
+        {
+          "id": "fukuchi_speed_effects",
+          "count": 18
+        },
+        {
+          "id": "perry_step_stride_progression",
+          "count": 6
+        }
+      ]
+    },
+    "model=mistral-small:24b": {
+      "label": "model=mistral-small:24b",
+      "n": 242,
+      "datasets": {
+        "Health&Gait": 242
+      },
+      "models": {
+        "mistral-small:24b": 242
+      },
+      "feature_count": {
+        "mean": 2.235537,
+        "sd": 1.35081,
+        "min": 1.0,
+        "max": 8.0
+      },
+      "metrics": {
+        "feature_coverage": {
+          "n": 242,
+          "embedding_mean": 0.998623,
+          "vectorless_mean": 0.954546,
+          "mean_diff_vectorless_minus_embedding": -0.044077,
+          "diff_sd": 0.200743,
+          "bootstrap_ci95": [
+            -0.071625,
+            -0.022038
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 230,
+            "embedding_better_or_larger": 12,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 12,
+            "positive": 0,
+            "negative": 12,
+            "ties": 230,
+            "p_two_sided": 0.000488
+          }
+        },
+        "faithfulness": {
+          "n": 242,
+          "embedding_mean": 1.0,
+          "vectorless_mean": 0.954545,
+          "mean_diff_vectorless_minus_embedding": -0.045455,
+          "diff_sd": 0.203279,
+          "bootstrap_ci95": [
+            -0.072314,
+            -0.022727
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 230,
+            "embedding_better_or_larger": 12,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 12,
+            "positive": 0,
+            "negative": 12,
+            "ties": 230,
+            "p_two_sided": 0.000488
+          }
+        },
+        "hallucination_rate": {
+          "n": 242,
+          "embedding_mean": 0.0,
+          "vectorless_mean": 0.045455,
+          "mean_diff_vectorless_minus_embedding": 0.045455,
+          "diff_sd": 0.203279,
+          "bootstrap_ci95": [
+            0.022727,
+            0.072314
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 230,
+            "embedding_better_or_larger": 12,
+            "direction": "lower_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 12,
+            "positive": 12,
+            "negative": 0,
+            "ties": 230,
+            "p_two_sided": 0.000488
+          }
+        },
+        "citation_accuracy": {
+          "n": 242,
+          "embedding_mean": 1.0,
+          "vectorless_mean": 0.958678,
+          "mean_diff_vectorless_minus_embedding": -0.041322,
+          "diff_sd": 0.199035,
+          "bootstrap_ci95": [
+            -0.066116,
+            -0.020661
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 232,
+            "embedding_better_or_larger": 10,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 10,
+            "positive": 0,
+            "negative": 10,
+            "ties": 232,
+            "p_two_sided": 0.001953
+          }
+        },
+        "claim_count": {
+          "n": 242,
+          "embedding_mean": 2.119835,
+          "vectorless_mean": 1.793388,
+          "mean_diff_vectorless_minus_embedding": -0.326446,
+          "diff_sd": 0.633796,
+          "bootstrap_ci95": [
+            -0.404959,
+            -0.243802
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 6,
+            "ties": 167,
+            "embedding_better_or_larger": 69,
+            "direction": "count_only"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 75,
+            "positive": 6,
+            "negative": 69,
+            "ties": 167,
+            "p_two_sided": 0.0
+          }
+        },
+        "quality_score": {
+          "n": 242,
+          "embedding_mean": 2.998623,
+          "vectorless_mean": 2.822314,
+          "mean_diff_vectorless_minus_embedding": -0.176308,
+          "diff_sd": 0.802972,
+          "bootstrap_ci95": [
+            -0.286501,
+            -0.088154
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 230,
+            "embedding_better_or_larger": 12,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 12,
+            "positive": 0,
+            "negative": 12,
+            "ties": 230,
+            "p_two_sided": 0.000488
+          }
+        }
+      },
+      "top_embedding_contexts": [
+        {
+          "id": "health_gait_dataset_schema",
+          "count": 242
+        },
+        {
+          "id": "fukuchi_speed_effects",
+          "count": 191
+        },
+        {
+          "id": "perry_velocity_cadence_timing",
+          "count": 157
+        },
+        {
+          "id": "perry_support_phase_stability",
+          "count": 123
+        },
+        {
+          "id": "perry_step_stride_progression",
+          "count": 84
+        }
+      ],
+      "top_vectorless_nodes": [
+        {
+          "id": "perry_velocity_cadence_timing",
+          "count": 150
+        },
+        {
+          "id": "perry_support_phase_stability",
+          "count": 148
+        },
+        {
+          "id": "pathology_context_neurological_orthopedic_gait",
+          "count": 93
+        },
+        {
+          "id": "perry_step_stride_progression",
+          "count": 86
+        },
+        {
+          "id": "perry_data2_progression_speed_length",
+          "count": 52
+        },
+        {
+          "id": "fukuchi_speed_effects",
+          "count": 44
+        },
+        {
+          "id": "health_gait_csv_parameter_mapping",
+          "count": 15
+        }
+      ]
+    },
+    "model=qwen3:14b": {
+      "label": "model=qwen3:14b",
+      "n": 242,
+      "datasets": {
+        "Health&Gait": 242
+      },
+      "models": {
+        "qwen3:14b": 242
+      },
+      "feature_count": {
+        "mean": 2.235537,
+        "sd": 1.35081,
+        "min": 1.0,
+        "max": 8.0
+      },
+      "metrics": {
+        "feature_coverage": {
+          "n": 242,
+          "embedding_mean": 0.994766,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.005234,
+          "diff_sd": 0.033164,
+          "bootstrap_ci95": [
+            0.001378,
+            0.00978
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 6,
+            "ties": 236,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 6,
+            "positive": 6,
+            "negative": 0,
+            "ties": 236,
+            "p_two_sided": 0.03125
+          }
+        },
+        "faithfulness": {
+          "n": 242,
+          "embedding_mean": 0.993802,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.006198,
+          "diff_sd": 0.040437,
+          "bootstrap_ci95": [
+            0.001653,
+            0.011777
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 6,
+            "ties": 236,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 6,
+            "positive": 6,
+            "negative": 0,
+            "ties": 236,
+            "p_two_sided": 0.03125
+          }
+        },
+        "hallucination_rate": {
+          "n": 242,
+          "embedding_mean": 0.006198,
+          "vectorless_mean": 0.0,
+          "mean_diff_vectorless_minus_embedding": -0.006198,
+          "diff_sd": 0.040437,
+          "bootstrap_ci95": [
+            -0.011777,
+            -0.001653
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 6,
+            "ties": 236,
+            "embedding_better_or_larger": 0,
+            "direction": "lower_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 6,
+            "positive": 0,
+            "negative": 6,
+            "ties": 236,
+            "p_two_sided": 0.03125
+          }
+        },
+        "citation_accuracy": {
+          "n": 242,
+          "embedding_mean": 1.0,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.0,
+          "diff_sd": 0.0,
+          "bootstrap_ci95": [
+            0.0,
+            0.0
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 242,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 0,
+            "positive": 0,
+            "negative": 0,
+            "ties": 242,
+            "p_two_sided": 1.0
+          }
+        },
+        "claim_count": {
+          "n": 242,
+          "embedding_mean": 2.161157,
+          "vectorless_mean": 1.987603,
+          "mean_diff_vectorless_minus_embedding": -0.173554,
+          "diff_sd": 0.540549,
+          "bootstrap_ci95": [
+            -0.239669,
+            -0.107438
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 5,
+            "ties": 202,
+            "embedding_better_or_larger": 35,
+            "direction": "count_only"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 40,
+            "positive": 5,
+            "negative": 35,
+            "ties": 202,
+            "p_two_sided": 1e-06
+          }
+        },
+        "quality_score": {
+          "n": 242,
+          "embedding_mean": 2.982369,
+          "vectorless_mean": 3.0,
+          "mean_diff_vectorless_minus_embedding": 0.017631,
+          "diff_sd": 0.113441,
+          "bootstrap_ci95": [
+            0.004959,
+            0.033402
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 6,
+            "ties": 236,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 6,
+            "positive": 6,
+            "negative": 0,
+            "ties": 236,
+            "p_two_sided": 0.03125
+          }
+        }
+      },
+      "top_embedding_contexts": [
+        {
+          "id": "health_gait_dataset_schema",
+          "count": 242
+        },
+        {
+          "id": "fukuchi_speed_effects",
+          "count": 191
+        },
+        {
+          "id": "perry_velocity_cadence_timing",
+          "count": 157
+        },
+        {
+          "id": "perry_support_phase_stability",
+          "count": 123
+        },
+        {
+          "id": "perry_step_stride_progression",
+          "count": 84
+        }
+      ],
+      "top_vectorless_nodes": [
+        {
+          "id": "perry_velocity_cadence_timing",
+          "count": 161
+        },
+        {
+          "id": "perry_support_phase_stability",
+          "count": 148
+        },
+        {
+          "id": "pathology_context_neurological_orthopedic_gait",
+          "count": 111
+        },
+        {
+          "id": "perry_step_stride_progression",
+          "count": 86
+        },
+        {
+          "id": "clinical_dataset_biomechanical_feature_provenance",
+          "count": 75
+        },
+        {
+          "id": "perry_data2_progression_speed_length",
+          "count": 40
+        },
+        {
+          "id": "fukuchi_speed_effects",
+          "count": 29
+        },
+        {
+          "id": "health_gait_csv_parameter_mapping",
+          "count": 11
+        },
+        {
+          "id": "perry_data2_phase_support_asymmetry",
+          "count": 3
+        },
+        {
+          "id": "clinical_gait_analysis_general_context",
+          "count": 1
+        }
+      ]
+    },
+    "dataset=Health&Gait | model=llama3.1:8b": {
+      "label": "dataset=Health&Gait | model=llama3.1:8b",
+      "n": 242,
+      "datasets": {
+        "Health&Gait": 242
+      },
+      "models": {
+        "llama3.1:8b": 242
+      },
+      "feature_count": {
+        "mean": 2.235537,
+        "sd": 1.35081,
+        "min": 1.0,
+        "max": 8.0
+      },
+      "metrics": {
+        "feature_coverage": {
+          "n": 242,
+          "embedding_mean": 0.998347,
+          "vectorless_mean": 0.625826,
+          "mean_diff_vectorless_minus_embedding": -0.372521,
+          "diff_sd": 0.463918,
+          "bootstrap_ci95": [
+            -0.431819,
+            -0.314326
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 142,
+            "embedding_better_or_larger": 100,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 100,
+            "positive": 0,
+            "negative": 100,
+            "ties": 142,
+            "p_two_sided": 0.0
+          }
+        },
+        "faithfulness": {
+          "n": 242,
+          "embedding_mean": 0.995386,
+          "vectorless_mean": 0.629476,
+          "mean_diff_vectorless_minus_embedding": -0.36591,
+          "diff_sd": 0.468748,
+          "bootstrap_ci95": [
+            -0.426516,
+            -0.308058
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 3,
+            "ties": 141,
+            "embedding_better_or_larger": 98,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 101,
+            "positive": 3,
+            "negative": 98,
+            "ties": 141,
+            "p_two_sided": 0.0
+          }
+        },
+        "hallucination_rate": {
+          "n": 242,
+          "embedding_mean": 0.004614,
+          "vectorless_mean": 0.370524,
+          "mean_diff_vectorless_minus_embedding": 0.36591,
+          "diff_sd": 0.468748,
+          "bootstrap_ci95": [
+            0.307852,
+            0.426378
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 3,
+            "ties": 141,
+            "embedding_better_or_larger": 98,
+            "direction": "lower_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 101,
+            "positive": 98,
+            "negative": 3,
+            "ties": 141,
+            "p_two_sided": 0.0
+          }
+        },
+        "citation_accuracy": {
+          "n": 242,
+          "embedding_mean": 1.0,
+          "vectorless_mean": 0.665289,
+          "mean_diff_vectorless_minus_embedding": -0.334711,
+          "diff_sd": 0.471889,
+          "bootstrap_ci95": [
+            -0.392562,
+            -0.27686
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 161,
+            "embedding_better_or_larger": 81,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 81,
+            "positive": 0,
+            "negative": 81,
+            "ties": 161,
+            "p_two_sided": 0.0
+          }
+        },
+        "claim_count": {
+          "n": 242,
+          "embedding_mean": 2.305785,
+          "vectorless_mean": 1.305785,
+          "mean_diff_vectorless_minus_embedding": -1.0,
+          "diff_sd": 1.323656,
+          "bootstrap_ci95": [
+            -1.157025,
+            -0.834711
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 15,
+            "ties": 103,
+            "embedding_better_or_larger": 124,
+            "direction": "count_only"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 139,
+            "positive": 15,
+            "negative": 124,
+            "ties": 103,
+            "p_two_sided": 0.0
+          }
+        },
+        "quality_score": {
+          "n": 242,
+          "embedding_mean": 2.989119,
+          "vectorless_mean": 1.550068,
+          "mean_diff_vectorless_minus_embedding": -1.439051,
+          "diff_sd": 1.857552,
+          "bootstrap_ci95": [
+            -1.675896,
+            -1.209781
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 3,
+            "ties": 139,
+            "embedding_better_or_larger": 100,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 103,
+            "positive": 3,
+            "negative": 100,
+            "ties": 139,
+            "p_two_sided": 0.0
+          }
+        }
+      },
+      "top_embedding_contexts": [
+        {
+          "id": "health_gait_dataset_schema",
+          "count": 242
+        },
+        {
+          "id": "fukuchi_speed_effects",
+          "count": 191
+        },
+        {
+          "id": "perry_velocity_cadence_timing",
+          "count": 157
+        },
+        {
+          "id": "perry_support_phase_stability",
+          "count": 123
+        },
+        {
+          "id": "perry_step_stride_progression",
+          "count": 84
+        }
+      ],
+      "top_vectorless_nodes": [
+        {
+          "id": "perry_data2_progression_speed_length",
+          "count": 236
+        },
+        {
+          "id": "clinical_dataset_biomechanical_feature_provenance",
+          "count": 126
+        },
+        {
+          "id": "perry_data2_phase_support_asymmetry",
+          "count": 118
+        },
+        {
+          "id": "health_gait_csv_parameter_mapping",
+          "count": 110
+        },
+        {
+          "id": "perry_support_phase_stability",
+          "count": 87
+        },
+        {
+          "id": "perry_velocity_cadence_timing",
+          "count": 20
+        },
+        {
+          "id": "fukuchi_speed_effects",
+          "count": 18
+        },
+        {
+          "id": "perry_step_stride_progression",
+          "count": 6
+        }
+      ]
+    },
+    "dataset=Health&Gait | model=mistral-small:24b": {
+      "label": "dataset=Health&Gait | model=mistral-small:24b",
+      "n": 242,
+      "datasets": {
+        "Health&Gait": 242
+      },
+      "models": {
+        "mistral-small:24b": 242
+      },
+      "feature_count": {
+        "mean": 2.235537,
+        "sd": 1.35081,
+        "min": 1.0,
+        "max": 8.0
+      },
+      "metrics": {
+        "feature_coverage": {
+          "n": 242,
+          "embedding_mean": 0.998623,
+          "vectorless_mean": 0.954546,
+          "mean_diff_vectorless_minus_embedding": -0.044077,
+          "diff_sd": 0.200743,
+          "bootstrap_ci95": [
+            -0.071625,
+            -0.022038
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 230,
+            "embedding_better_or_larger": 12,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 12,
+            "positive": 0,
+            "negative": 12,
+            "ties": 230,
+            "p_two_sided": 0.000488
+          }
+        },
+        "faithfulness": {
+          "n": 242,
+          "embedding_mean": 1.0,
+          "vectorless_mean": 0.954545,
+          "mean_diff_vectorless_minus_embedding": -0.045455,
+          "diff_sd": 0.203279,
+          "bootstrap_ci95": [
+            -0.072314,
+            -0.022727
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 230,
+            "embedding_better_or_larger": 12,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 12,
+            "positive": 0,
+            "negative": 12,
+            "ties": 230,
+            "p_two_sided": 0.000488
+          }
+        },
+        "hallucination_rate": {
+          "n": 242,
+          "embedding_mean": 0.0,
+          "vectorless_mean": 0.045455,
+          "mean_diff_vectorless_minus_embedding": 0.045455,
+          "diff_sd": 0.203279,
+          "bootstrap_ci95": [
+            0.022727,
+            0.072314
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 230,
+            "embedding_better_or_larger": 12,
+            "direction": "lower_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 12,
+            "positive": 12,
+            "negative": 0,
+            "ties": 230,
+            "p_two_sided": 0.000488
+          }
+        },
+        "citation_accuracy": {
+          "n": 242,
+          "embedding_mean": 1.0,
+          "vectorless_mean": 0.958678,
+          "mean_diff_vectorless_minus_embedding": -0.041322,
+          "diff_sd": 0.199035,
+          "bootstrap_ci95": [
+            -0.066116,
+            -0.020661
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 232,
+            "embedding_better_or_larger": 10,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 10,
+            "positive": 0,
+            "negative": 10,
+            "ties": 232,
+            "p_two_sided": 0.001953
+          }
+        },
+        "claim_count": {
+          "n": 242,
+          "embedding_mean": 2.119835,
+          "vectorless_mean": 1.793388,
+          "mean_diff_vectorless_minus_embedding": -0.326446,
+          "diff_sd": 0.633796,
+          "bootstrap_ci95": [
+            -0.404959,
+            -0.243802
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 6,
+            "ties": 167,
+            "embedding_better_or_larger": 69,
+            "direction": "count_only"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 75,
+            "positive": 6,
+            "negative": 69,
+            "ties": 167,
+            "p_two_sided": 0.0
+          }
+        },
+        "quality_score": {
+          "n": 242,
+          "embedding_mean": 2.998623,
+          "vectorless_mean": 2.822314,
+          "mean_diff_vectorless_minus_embedding": -0.176308,
+          "diff_sd": 0.802972,
+          "bootstrap_ci95": [
+            -0.286501,
+            -0.088154
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 230,
+            "embedding_better_or_larger": 12,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 12,
+            "positive": 0,
+            "negative": 12,
+            "ties": 230,
+            "p_two_sided": 0.000488
+          }
+        }
+      },
+      "top_embedding_contexts": [
+        {
+          "id": "health_gait_dataset_schema",
+          "count": 242
+        },
+        {
+          "id": "fukuchi_speed_effects",
+          "count": 191
+        },
+        {
+          "id": "perry_velocity_cadence_timing",
+          "count": 157
+        },
+        {
+          "id": "perry_support_phase_stability",
+          "count": 123
+        },
+        {
+          "id": "perry_step_stride_progression",
+          "count": 84
+        }
+      ],
+      "top_vectorless_nodes": [
+        {
+          "id": "perry_velocity_cadence_timing",
+          "count": 150
+        },
+        {
+          "id": "perry_support_phase_stability",
+          "count": 148
+        },
+        {
+          "id": "pathology_context_neurological_orthopedic_gait",
+          "count": 93
+        },
+        {
+          "id": "perry_step_stride_progression",
+          "count": 86
+        },
+        {
+          "id": "perry_data2_progression_speed_length",
+          "count": 52
+        },
+        {
+          "id": "fukuchi_speed_effects",
+          "count": 44
+        },
+        {
+          "id": "health_gait_csv_parameter_mapping",
+          "count": 15
+        }
+      ]
+    },
+    "dataset=Health&Gait | model=qwen3:14b": {
+      "label": "dataset=Health&Gait | model=qwen3:14b",
+      "n": 242,
+      "datasets": {
+        "Health&Gait": 242
+      },
+      "models": {
+        "qwen3:14b": 242
+      },
+      "feature_count": {
+        "mean": 2.235537,
+        "sd": 1.35081,
+        "min": 1.0,
+        "max": 8.0
+      },
+      "metrics": {
+        "feature_coverage": {
+          "n": 242,
+          "embedding_mean": 0.994766,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.005234,
+          "diff_sd": 0.033164,
+          "bootstrap_ci95": [
+            0.001378,
+            0.00978
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 6,
+            "ties": 236,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 6,
+            "positive": 6,
+            "negative": 0,
+            "ties": 236,
+            "p_two_sided": 0.03125
+          }
+        },
+        "faithfulness": {
+          "n": 242,
+          "embedding_mean": 0.993802,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.006198,
+          "diff_sd": 0.040437,
+          "bootstrap_ci95": [
+            0.001653,
+            0.011777
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 6,
+            "ties": 236,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 6,
+            "positive": 6,
+            "negative": 0,
+            "ties": 236,
+            "p_two_sided": 0.03125
+          }
+        },
+        "hallucination_rate": {
+          "n": 242,
+          "embedding_mean": 0.006198,
+          "vectorless_mean": 0.0,
+          "mean_diff_vectorless_minus_embedding": -0.006198,
+          "diff_sd": 0.040437,
+          "bootstrap_ci95": [
+            -0.011777,
+            -0.001653
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 6,
+            "ties": 236,
+            "embedding_better_or_larger": 0,
+            "direction": "lower_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 6,
+            "positive": 0,
+            "negative": 6,
+            "ties": 236,
+            "p_two_sided": 0.03125
+          }
+        },
+        "citation_accuracy": {
+          "n": 242,
+          "embedding_mean": 1.0,
+          "vectorless_mean": 1.0,
+          "mean_diff_vectorless_minus_embedding": 0.0,
+          "diff_sd": 0.0,
+          "bootstrap_ci95": [
+            0.0,
+            0.0
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 0,
+            "ties": 242,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 0,
+            "positive": 0,
+            "negative": 0,
+            "ties": 242,
+            "p_two_sided": 1.0
+          }
+        },
+        "claim_count": {
+          "n": 242,
+          "embedding_mean": 2.161157,
+          "vectorless_mean": 1.987603,
+          "mean_diff_vectorless_minus_embedding": -0.173554,
+          "diff_sd": 0.540549,
+          "bootstrap_ci95": [
+            -0.239669,
+            -0.107438
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 5,
+            "ties": 202,
+            "embedding_better_or_larger": 35,
+            "direction": "count_only"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 40,
+            "positive": 5,
+            "negative": 35,
+            "ties": 202,
+            "p_two_sided": 1e-06
+          }
+        },
+        "quality_score": {
+          "n": 242,
+          "embedding_mean": 2.982369,
+          "vectorless_mean": 3.0,
+          "mean_diff_vectorless_minus_embedding": 0.017631,
+          "diff_sd": 0.113441,
+          "bootstrap_ci95": [
+            0.004959,
+            0.033402
+          ],
+          "wins_ties_losses": {
+            "vectorless_better_or_larger": 6,
+            "ties": 236,
+            "embedding_better_or_larger": 0,
+            "direction": "higher_is_better"
+          },
+          "exact_sign_test": {
+            "n_non_tied": 6,
+            "positive": 6,
+            "negative": 0,
+            "ties": 236,
+            "p_two_sided": 0.03125
+          }
+        }
+      },
+      "top_embedding_contexts": [
+        {
+          "id": "health_gait_dataset_schema",
+          "count": 242
+        },
+        {
+          "id": "fukuchi_speed_effects",
+          "count": 191
+        },
+        {
+          "id": "perry_velocity_cadence_timing",
+          "count": 157
+        },
+        {
+          "id": "perry_support_phase_stability",
+          "count": 123
+        },
+        {
+          "id": "perry_step_stride_progression",
+          "count": 84
+        }
+      ],
+      "top_vectorless_nodes": [
+        {
+          "id": "perry_velocity_cadence_timing",
+          "count": 161
+        },
+        {
+          "id": "perry_support_phase_stability",
+          "count": 148
+        },
+        {
+          "id": "pathology_context_neurological_orthopedic_gait",
+          "count": 111
+        },
+        {
+          "id": "perry_step_stride_progression",
+          "count": 86
+        },
+        {
+          "id": "clinical_dataset_biomechanical_feature_provenance",
+          "count": 75
+        },
+        {
+          "id": "perry_data2_progression_speed_length",
+          "count": 40
+        },
+        {
+          "id": "fukuchi_speed_effects",
+          "count": 29
+        },
+        {
+          "id": "health_gait_csv_parameter_mapping",
+          "count": 11
+        },
+        {
+          "id": "perry_data2_phase_support_asymmetry",
+          "count": 3
+        },
+        {
+          "id": "clinical_gait_analysis_general_context",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "notes": [
+    "All comparisons are paired within the same case and LLM.",
+    "Mean difference is vectorless_tree_rag minus embedding_rag.",
+    "For hallucination_rate, negative mean difference favors vectorless_tree_rag because lower is better.",
+    "Sign-test p-values are exact two-sided tests over non-tied paired differences.",
+    "Bootstrap CIs are percentile intervals for the mean paired difference.",
+    "Records with status=no_features are counted but excluded from inferential paired tests."
+  ]
+}
